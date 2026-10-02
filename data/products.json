@@ -1,0 +1,2302 @@
+[
+    {
+        "product_id": "PROD-001",
+        "name": "Classic Casual Shorts",
+        "category": "Shorts",
+        "description": "A regular fit black classic casual shorts made from cotton. Designed for everyday comfort and casual wear.",
+        "price": 1099,
+        "currency": "INR",
+        "color": "Black",
+        "fit": "Regular",
+        "material": "Cotton",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "1.jpg",
+            "2.jpg",
+            "3.jpg",
+            "4.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-002",
+        "name": "Classic Pullover Hoodie",
+        "category": "Hoodies",
+        "description": "A oversized fit blue classic pullover hoodie made from cotton fleece. Designed for everyday comfort and casual wear.",
+        "price": 2399,
+        "currency": "INR",
+        "color": "Blue",
+        "fit": "Oversized",
+        "material": "Cotton Fleece",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "5.jpg",
+            "6.jpg",
+            "7.jpg",
+            "8.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-003",
+        "name": "Urban Street T-Shirt",
+        "category": "T-Shirts",
+        "description": "A relaxed fit green urban street t-shirt made from cotton blend. Designed for everyday comfort and casual wear.",
+        "price": 1699,
+        "currency": "INR",
+        "color": "Green",
+        "fit": "Relaxed",
+        "material": "Cotton Blend",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "9.jpg",
+            "10.jpg",
+            "11.jpg",
+            "12.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-004",
+        "name": "Classic Casual Shorts",
+        "category": "Shorts",
+        "description": "A slim fit black classic casual shorts made from cotton. Designed for everyday comfort and casual wear.",
+        "price": 1499,
+        "currency": "INR",
+        "color": "Black",
+        "fit": "Slim",
+        "material": "Cotton",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "13.jpg",
+            "14.jpg",
+            "15.jpg",
+            "16.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-005",
+        "name": "Classic Crewneck Sweatshirt",
+        "category": "Sweatshirts",
+        "description": "A relaxed fit green classic crewneck sweatshirt made from polyester blend. Designed for everyday comfort and casual wear.",
+        "price": 2399,
+        "currency": "INR",
+        "color": "Green",
+        "fit": "Relaxed",
+        "material": "Polyester Blend",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "17.jpg",
+            "18.jpg",
+            "19.jpg",
+            "20.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-006",
+        "name": "Straight Fit Pants",
+        "category": "Pants",
+        "description": "A regular fit grey straight fit pants made from cotton. Designed for everyday comfort and casual wear.",
+        "price": 1899,
+        "currency": "INR",
+        "color": "Grey",
+        "fit": "Regular",
+        "material": "Cotton",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "21.jpg",
+            "22.jpg",
+            "23.jpg",
+            "24.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-007",
+        "name": "Checked Casual Shirt",
+        "category": "Shirts",
+        "description": "A regular fit grey checked casual shirt made from linen. Designed for everyday comfort and casual wear.",
+        "price": 1599,
+        "currency": "INR",
+        "color": "Grey",
+        "fit": "Regular",
+        "material": "Linen",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "25.jpg",
+            "26.jpg",
+            "27.jpg",
+            "28.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-008",
+        "name": "Classic Casual Pants",
+        "category": "Pants",
+        "description": "A straight fit brown classic casual pants made from cotton. Designed for everyday comfort and casual wear.",
+        "price": 2399,
+        "currency": "INR",
+        "color": "Brown",
+        "fit": "Straight",
+        "material": "Cotton",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "29.jpg",
+            "30.jpg",
+            "31.jpg",
+            "32.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-009",
+        "name": "Premium Basic T-Shirt",
+        "category": "T-Shirts",
+        "description": "A slim fit white premium basic t-shirt made from cotton blend. Designed for everyday comfort and casual wear.",
+        "price": 1199,
+        "currency": "INR",
+        "color": "White",
+        "fit": "Slim",
+        "material": "Cotton Blend",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "33.jpg",
+            "34.jpg",
+            "35.jpg",
+            "36.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-010",
+        "name": "Classic Blue Jeans",
+        "category": "Jeans",
+        "description": "A slim fit blue classic blue jeans made from cotton denim. Designed for everyday comfort and casual wear.",
+        "price": 3199,
+        "currency": "INR",
+        "color": "Blue",
+        "fit": "Slim",
+        "material": "Cotton Denim",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "37.jpg",
+            "38.jpg",
+            "39.jpg",
+            "40.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-011",
+        "name": "Utility Jacket",
+        "category": "Jackets",
+        "description": "A oversized fit brown utility jacket made from denim. Designed for everyday comfort and casual wear.",
+        "price": 3799,
+        "currency": "INR",
+        "color": "Brown",
+        "fit": "Oversized",
+        "material": "Denim",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "41.jpg",
+            "42.jpg",
+            "43.jpg",
+            "44.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-012",
+        "name": "Sport Casual Shorts",
+        "category": "Shorts",
+        "description": "A relaxed fit white sport casual shorts made from polyester. Designed for everyday comfort and casual wear.",
+        "price": 1699,
+        "currency": "INR",
+        "color": "White",
+        "fit": "Relaxed",
+        "material": "Polyester",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "45.jpg",
+            "46.jpg",
+            "47.jpg",
+            "48.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-013",
+        "name": "Comfort Cotton Trousers",
+        "category": "Pants",
+        "description": "A relaxed fit black comfort cotton trousers made from cotton blend. Designed for everyday comfort and casual wear.",
+        "price": 2499,
+        "currency": "INR",
+        "color": "Black",
+        "fit": "Relaxed",
+        "material": "Cotton Blend",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "49.jpg",
+            "50.jpg",
+            "51.jpg",
+            "52.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-014",
+        "name": "Relaxed Denim Jeans",
+        "category": "Jeans",
+        "description": "A straight fit brown relaxed denim jeans made from cotton denim. Designed for everyday comfort and casual wear.",
+        "price": 1899,
+        "currency": "INR",
+        "color": "Brown",
+        "fit": "Straight",
+        "material": "Cotton Denim",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "53.jpg",
+            "54.jpg",
+            "55.jpg",
+            "56.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-015",
+        "name": "Comfort Cotton Trousers",
+        "category": "Pants",
+        "description": "A regular fit beige comfort cotton trousers made from cotton. Designed for everyday comfort and casual wear.",
+        "price": 2999,
+        "currency": "INR",
+        "color": "Beige",
+        "fit": "Regular",
+        "material": "Cotton",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "57.jpg",
+            "58.jpg",
+            "59.jpg",
+            "60.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-016",
+        "name": "Utility Jacket",
+        "category": "Jackets",
+        "description": "A relaxed fit black utility jacket made from polyester. Designed for everyday comfort and casual wear.",
+        "price": 2699,
+        "currency": "INR",
+        "color": "Black",
+        "fit": "Relaxed",
+        "material": "Polyester",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "61.jpg",
+            "62.jpg",
+            "63.jpg",
+            "64.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-017",
+        "name": "Casual Linen Shirt",
+        "category": "Shirts",
+        "description": "A relaxed fit white casual linen shirt made from linen. Designed for everyday comfort and casual wear.",
+        "price": 1799,
+        "currency": "INR",
+        "color": "White",
+        "fit": "Relaxed",
+        "material": "Linen",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "65.jpg",
+            "66.jpg",
+            "67.jpg",
+            "68.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-018",
+        "name": "Straight Fit Pants",
+        "category": "Pants",
+        "description": "A relaxed fit green straight fit pants made from cotton. Designed for everyday comfort and casual wear.",
+        "price": 1599,
+        "currency": "INR",
+        "color": "Green",
+        "fit": "Relaxed",
+        "material": "Cotton",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "69.jpg",
+            "70.jpg",
+            "71.jpg",
+            "72.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-019",
+        "name": "Urban Street T-Shirt",
+        "category": "T-Shirts",
+        "description": "A oversized fit blue urban street t-shirt made from organic cotton. Designed for everyday comfort and casual wear.",
+        "price": 1199,
+        "currency": "INR",
+        "color": "Blue",
+        "fit": "Oversized",
+        "material": "Organic Cotton",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "73.jpg",
+            "74.jpg",
+            "75.jpg",
+            "76.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-020",
+        "name": "Slim Fit Jeans",
+        "category": "Jeans",
+        "description": "A slim fit brown slim fit jeans made from cotton denim. Designed for everyday comfort and casual wear.",
+        "price": 3099,
+        "currency": "INR",
+        "color": "Brown",
+        "fit": "Slim",
+        "material": "Cotton Denim",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "77.jpg",
+            "78.jpg",
+            "79.jpg",
+            "80.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-021",
+        "name": "Straight Fit Denim",
+        "category": "Jeans",
+        "description": "A straight fit blue straight fit denim made from cotton denim. Designed for everyday comfort and casual wear.",
+        "price": 3499,
+        "currency": "INR",
+        "color": "Blue",
+        "fit": "Straight",
+        "material": "Cotton Denim",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "81.jpg",
+            "82.jpg",
+            "83.jpg",
+            "84.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-022",
+        "name": "Classic Crewneck Sweatshirt",
+        "category": "Sweatshirts",
+        "description": "A regular fit navy classic crewneck sweatshirt made from cotton blend. Designed for everyday comfort and casual wear.",
+        "price": 2499,
+        "currency": "INR",
+        "color": "Navy",
+        "fit": "Regular",
+        "material": "Cotton Blend",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "85.jpg",
+            "86.jpg",
+            "87.jpg",
+            "88.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-023",
+        "name": "Relaxed Denim Jeans",
+        "category": "Jeans",
+        "description": "A relaxed fit white relaxed denim jeans made from cotton denim. Designed for everyday comfort and casual wear.",
+        "price": 3299,
+        "currency": "INR",
+        "color": "White",
+        "fit": "Relaxed",
+        "material": "Cotton Denim",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "89.jpg",
+            "90.jpg",
+            "91.jpg",
+            "92.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-024",
+        "name": "Classic Cotton T-Shirt",
+        "category": "T-Shirts",
+        "description": "A slim fit black classic cotton t-shirt made from organic cotton. Designed for everyday comfort and casual wear.",
+        "price": 1399,
+        "currency": "INR",
+        "color": "Black",
+        "fit": "Slim",
+        "material": "Organic Cotton",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "93.jpg",
+            "94.jpg",
+            "95.jpg",
+            "96.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-025",
+        "name": "Classic Casual Jacket",
+        "category": "Jackets",
+        "description": "A regular fit black classic casual jacket made from nylon. Designed for everyday comfort and casual wear.",
+        "price": 3199,
+        "currency": "INR",
+        "color": "Black",
+        "fit": "Regular",
+        "material": "Nylon",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "97.jpg",
+            "98.jpg",
+            "99.jpg",
+            "100.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-026",
+        "name": "Straight Fit Pants",
+        "category": "Pants",
+        "description": "A straight fit beige straight fit pants made from polyester blend. Designed for everyday comfort and casual wear.",
+        "price": 2199,
+        "currency": "INR",
+        "color": "Beige",
+        "fit": "Straight",
+        "material": "Polyester Blend",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "101.jpg",
+            "102.jpg",
+            "103.jpg",
+            "104.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-027",
+        "name": "Checked Casual Shirt",
+        "category": "Shirts",
+        "description": "A regular fit green checked casual shirt made from cotton. Designed for everyday comfort and casual wear.",
+        "price": 1499,
+        "currency": "INR",
+        "color": "Green",
+        "fit": "Regular",
+        "material": "Cotton",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "105.jpg",
+            "106.jpg",
+            "107.jpg",
+            "108.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-028",
+        "name": "Everyday Fleece Sweatshirt",
+        "category": "Sweatshirts",
+        "description": "A oversized fit white everyday fleece sweatshirt made from cotton blend. Designed for everyday comfort and casual wear.",
+        "price": 2199,
+        "currency": "INR",
+        "color": "White",
+        "fit": "Oversized",
+        "material": "Cotton Blend",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "109.jpg",
+            "110.jpg",
+            "111.jpg",
+            "112.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-029",
+        "name": "Casual Linen Shirt",
+        "category": "Shirts",
+        "description": "A regular fit blue casual linen shirt made from cotton blend. Designed for everyday comfort and casual wear.",
+        "price": 1599,
+        "currency": "INR",
+        "color": "Blue",
+        "fit": "Regular",
+        "material": "Cotton Blend",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "113.jpg",
+            "114.jpg",
+            "115.jpg",
+            "116.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-030",
+        "name": "Premium Basic T-Shirt",
+        "category": "T-Shirts",
+        "description": "A regular fit brown premium basic t-shirt made from cotton blend. Designed for everyday comfort and casual wear.",
+        "price": 1899,
+        "currency": "INR",
+        "color": "Brown",
+        "fit": "Regular",
+        "material": "Cotton Blend",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "117.jpg",
+            "118.jpg",
+            "119.jpg",
+            "120.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-031",
+        "name": "Classic Blue Jeans",
+        "category": "Jeans",
+        "description": "A relaxed fit grey classic blue jeans made from cotton denim. Designed for everyday comfort and casual wear.",
+        "price": 3199,
+        "currency": "INR",
+        "color": "Grey",
+        "fit": "Relaxed",
+        "material": "Cotton Denim",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "121.jpg",
+            "122.jpg",
+            "123.jpg",
+            "124.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-032",
+        "name": "Classic Oxford Shirt",
+        "category": "Shirts",
+        "description": "A relaxed fit brown classic oxford shirt made from cotton blend. Designed for everyday comfort and casual wear.",
+        "price": 2399,
+        "currency": "INR",
+        "color": "Brown",
+        "fit": "Relaxed",
+        "material": "Cotton Blend",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "125.jpg",
+            "126.jpg",
+            "127.jpg",
+            "128.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-033",
+        "name": "Classic Casual Pants",
+        "category": "Pants",
+        "description": "A regular fit grey classic casual pants made from cotton blend. Designed for everyday comfort and casual wear.",
+        "price": 2199,
+        "currency": "INR",
+        "color": "Grey",
+        "fit": "Regular",
+        "material": "Cotton Blend",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "129.jpg",
+            "130.jpg",
+            "131.jpg",
+            "132.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-034",
+        "name": "Slim Fit Formal Shirt",
+        "category": "Shirts",
+        "description": "A slim fit beige slim fit formal shirt made from linen. Designed for everyday comfort and casual wear.",
+        "price": 1699,
+        "currency": "INR",
+        "color": "Beige",
+        "fit": "Slim",
+        "material": "Linen",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "133.jpg",
+            "134.jpg",
+            "135.jpg",
+            "136.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-035",
+        "name": "Lightweight Bomber Jacket",
+        "category": "Jackets",
+        "description": "A oversized fit blue lightweight bomber jacket made from nylon. Designed for everyday comfort and casual wear.",
+        "price": 2499,
+        "currency": "INR",
+        "color": "Blue",
+        "fit": "Oversized",
+        "material": "Nylon",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "137.jpg",
+            "138.jpg",
+            "139.jpg",
+            "140.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-036",
+        "name": "Straight Fit Pants",
+        "category": "Pants",
+        "description": "A straight fit beige straight fit pants made from cotton blend. Designed for everyday comfort and casual wear.",
+        "price": 2199,
+        "currency": "INR",
+        "color": "Beige",
+        "fit": "Straight",
+        "material": "Cotton Blend",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "141.jpg",
+            "142.jpg",
+            "143.jpg",
+            "144.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-037",
+        "name": "Straight Fit Denim",
+        "category": "Jeans",
+        "description": "A slim fit white straight fit denim made from cotton denim. Designed for everyday comfort and casual wear.",
+        "price": 2099,
+        "currency": "INR",
+        "color": "White",
+        "fit": "Slim",
+        "material": "Cotton Denim",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "145.jpg",
+            "146.jpg",
+            "147.jpg",
+            "148.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-038",
+        "name": "Sport Casual Shorts",
+        "category": "Shorts",
+        "description": "A slim fit green sport casual shorts made from polyester. Designed for everyday comfort and casual wear.",
+        "price": 799,
+        "currency": "INR",
+        "color": "Green",
+        "fit": "Slim",
+        "material": "Polyester",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "149.jpg",
+            "150.jpg",
+            "151.jpg",
+            "152.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-039",
+        "name": "Classic Casual Jacket",
+        "category": "Jackets",
+        "description": "A oversized fit brown classic casual jacket made from denim. Designed for everyday comfort and casual wear.",
+        "price": 3899,
+        "currency": "INR",
+        "color": "Brown",
+        "fit": "Oversized",
+        "material": "Denim",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "153.jpg",
+            "154.jpg",
+            "155.jpg",
+            "156.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-040",
+        "name": "Oversized Fleece Hoodie",
+        "category": "Hoodies",
+        "description": "A oversized fit black oversized fleece hoodie made from polyester fleece. Designed for everyday comfort and casual wear.",
+        "price": 1999,
+        "currency": "INR",
+        "color": "Black",
+        "fit": "Oversized",
+        "material": "Polyester Fleece",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "157.jpg",
+            "158.jpg",
+            "159.jpg",
+            "160.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-041",
+        "name": "Oversized Fleece Hoodie",
+        "category": "Hoodies",
+        "description": "A relaxed fit brown oversized fleece hoodie made from polyester fleece. Designed for everyday comfort and casual wear.",
+        "price": 2399,
+        "currency": "INR",
+        "color": "Brown",
+        "fit": "Relaxed",
+        "material": "Polyester Fleece",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "161.jpg",
+            "162.jpg",
+            "163.jpg",
+            "164.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-042",
+        "name": "Essential Casual T-Shirt",
+        "category": "T-Shirts",
+        "description": "A slim fit green essential casual t-shirt made from 100% cotton. Designed for everyday comfort and casual wear.",
+        "price": 1599,
+        "currency": "INR",
+        "color": "Green",
+        "fit": "Slim",
+        "material": "100% Cotton",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "165.jpg",
+            "166.jpg",
+            "167.jpg",
+            "168.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-043",
+        "name": "Classic Casual Pants",
+        "category": "Pants",
+        "description": "A straight fit blue classic casual pants made from polyester blend. Designed for everyday comfort and casual wear.",
+        "price": 1599,
+        "currency": "INR",
+        "color": "Blue",
+        "fit": "Straight",
+        "material": "Polyester Blend",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "169.jpg",
+            "170.jpg",
+            "171.jpg",
+            "172.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-044",
+        "name": "Everyday Comfort Hoodie",
+        "category": "Hoodies",
+        "description": "A oversized fit blue everyday comfort hoodie made from polyester fleece. Designed for everyday comfort and casual wear.",
+        "price": 1999,
+        "currency": "INR",
+        "color": "Blue",
+        "fit": "Oversized",
+        "material": "Polyester Fleece",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "173.jpg",
+            "174.jpg",
+            "175.jpg",
+            "176.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-045",
+        "name": "Classic Cotton T-Shirt",
+        "category": "T-Shirts",
+        "description": "A slim fit blue classic cotton t-shirt made from organic cotton. Designed for everyday comfort and casual wear.",
+        "price": 1599,
+        "currency": "INR",
+        "color": "Blue",
+        "fit": "Slim",
+        "material": "Organic Cotton",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "177.jpg",
+            "178.jpg",
+            "179.jpg",
+            "180.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-046",
+        "name": "Casual Linen Shirt",
+        "category": "Shirts",
+        "description": "A relaxed fit beige casual linen shirt made from cotton. Designed for everyday comfort and casual wear.",
+        "price": 2499,
+        "currency": "INR",
+        "color": "Beige",
+        "fit": "Relaxed",
+        "material": "Cotton",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "181.jpg",
+            "182.jpg",
+            "183.jpg",
+            "184.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-047",
+        "name": "Slim Fit Formal Shirt",
+        "category": "Shirts",
+        "description": "A relaxed fit brown slim fit formal shirt made from cotton blend. Designed for everyday comfort and casual wear.",
+        "price": 1299,
+        "currency": "INR",
+        "color": "Brown",
+        "fit": "Relaxed",
+        "material": "Cotton Blend",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "185.jpg",
+            "186.jpg",
+            "187.jpg",
+            "188.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-048",
+        "name": "Casual Linen Shirt",
+        "category": "Shirts",
+        "description": "A regular fit brown casual linen shirt made from cotton. Designed for everyday comfort and casual wear.",
+        "price": 1399,
+        "currency": "INR",
+        "color": "Brown",
+        "fit": "Regular",
+        "material": "Cotton",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "189.jpg",
+            "190.jpg",
+            "191.jpg",
+            "192.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-049",
+        "name": "Classic Cotton T-Shirt",
+        "category": "T-Shirts",
+        "description": "A oversized fit beige classic cotton t-shirt made from cotton blend. Designed for everyday comfort and casual wear.",
+        "price": 1799,
+        "currency": "INR",
+        "color": "Beige",
+        "fit": "Oversized",
+        "material": "Cotton Blend",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "193.jpg",
+            "194.jpg",
+            "195.jpg",
+            "196.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-050",
+        "name": "Lightweight Bomber Jacket",
+        "category": "Jackets",
+        "description": "A relaxed fit black lightweight bomber jacket made from polyester. Designed for everyday comfort and casual wear.",
+        "price": 2999,
+        "currency": "INR",
+        "color": "Black",
+        "fit": "Relaxed",
+        "material": "Polyester",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "197.jpg",
+            "198.jpg",
+            "199.jpg",
+            "200.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-051",
+        "name": "Checked Casual Shirt",
+        "category": "Shirts",
+        "description": "A slim fit brown checked casual shirt made from cotton blend. Designed for everyday comfort and casual wear.",
+        "price": 2399,
+        "currency": "INR",
+        "color": "Brown",
+        "fit": "Slim",
+        "material": "Cotton Blend",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "201.jpg",
+            "202.jpg",
+            "203.jpg",
+            "204.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-052",
+        "name": "Checked Casual Shirt",
+        "category": "Shirts",
+        "description": "A relaxed fit blue checked casual shirt made from cotton. Designed for everyday comfort and casual wear.",
+        "price": 1599,
+        "currency": "INR",
+        "color": "Blue",
+        "fit": "Relaxed",
+        "material": "Cotton",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "205.jpg",
+            "206.jpg",
+            "207.jpg",
+            "208.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-053",
+        "name": "Relaxed Cotton Shirt",
+        "category": "Shirts",
+        "description": "A slim fit navy relaxed cotton shirt made from linen. Designed for everyday comfort and casual wear.",
+        "price": 1899,
+        "currency": "INR",
+        "color": "Navy",
+        "fit": "Slim",
+        "material": "Linen",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "209.jpg",
+            "210.jpg",
+            "211.jpg",
+            "212.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-054",
+        "name": "Everyday Denim Jacket",
+        "category": "Jackets",
+        "description": "A regular fit blue everyday denim jacket made from nylon. Designed for everyday comfort and casual wear.",
+        "price": 2399,
+        "currency": "INR",
+        "color": "Blue",
+        "fit": "Regular",
+        "material": "Nylon",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "213.jpg",
+            "214.jpg",
+            "215.jpg",
+            "216.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-055",
+        "name": "Oversized Graphic T-Shirt",
+        "category": "T-Shirts",
+        "description": "A regular fit grey oversized graphic t-shirt made from organic cotton. Designed for everyday comfort and casual wear.",
+        "price": 1499,
+        "currency": "INR",
+        "color": "Grey",
+        "fit": "Regular",
+        "material": "Organic Cotton",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "217.jpg",
+            "218.jpg",
+            "219.jpg",
+            "220.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-056",
+        "name": "Classic Oxford Shirt",
+        "category": "Shirts",
+        "description": "A slim fit green classic oxford shirt made from cotton. Designed for everyday comfort and casual wear.",
+        "price": 2399,
+        "currency": "INR",
+        "color": "Green",
+        "fit": "Slim",
+        "material": "Cotton",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "221.jpg",
+            "222.jpg",
+            "223.jpg",
+            "224.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-057",
+        "name": "Sport Casual Shorts",
+        "category": "Shorts",
+        "description": "A relaxed fit grey sport casual shorts made from cotton. Designed for everyday comfort and casual wear.",
+        "price": 1399,
+        "currency": "INR",
+        "color": "Grey",
+        "fit": "Relaxed",
+        "material": "Cotton",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "225.jpg",
+            "226.jpg",
+            "227.jpg",
+            "228.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-058",
+        "name": "Classic Casual Jacket",
+        "category": "Jackets",
+        "description": "A oversized fit black classic casual jacket made from polyester. Designed for everyday comfort and casual wear.",
+        "price": 3199,
+        "currency": "INR",
+        "color": "Black",
+        "fit": "Oversized",
+        "material": "Polyester",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "229.jpg",
+            "230.jpg",
+            "231.jpg",
+            "232.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-059",
+        "name": "Lightweight Bomber Jacket",
+        "category": "Jackets",
+        "description": "A relaxed fit black lightweight bomber jacket made from cotton. Designed for everyday comfort and casual wear.",
+        "price": 3999,
+        "currency": "INR",
+        "color": "Black",
+        "fit": "Relaxed",
+        "material": "Cotton",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "233.jpg",
+            "234.jpg",
+            "235.jpg",
+            "236.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-060",
+        "name": "Utility Jacket",
+        "category": "Jackets",
+        "description": "A relaxed fit grey utility jacket made from cotton. Designed for everyday comfort and casual wear.",
+        "price": 3799,
+        "currency": "INR",
+        "color": "Grey",
+        "fit": "Relaxed",
+        "material": "Cotton",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "237.jpg",
+            "238.jpg",
+            "239.jpg",
+            "240.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-061",
+        "name": "Classic Pullover Hoodie",
+        "category": "Hoodies",
+        "description": "A regular fit black classic pullover hoodie made from cotton fleece. Designed for everyday comfort and casual wear.",
+        "price": 2899,
+        "currency": "INR",
+        "color": "Black",
+        "fit": "Regular",
+        "material": "Cotton Fleece",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "241.jpg",
+            "242.jpg",
+            "243.jpg",
+            "244.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-062",
+        "name": "Minimal Logo Hoodie",
+        "category": "Hoodies",
+        "description": "A oversized fit brown minimal logo hoodie made from cotton fleece. Designed for everyday comfort and casual wear.",
+        "price": 2799,
+        "currency": "INR",
+        "color": "Brown",
+        "fit": "Oversized",
+        "material": "Cotton Fleece",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "245.jpg",
+            "246.jpg",
+            "247.jpg",
+            "248.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-063",
+        "name": "Minimal Graphic Sweatshirt",
+        "category": "Sweatshirts",
+        "description": "A relaxed fit blue minimal graphic sweatshirt made from polyester blend. Designed for everyday comfort and casual wear.",
+        "price": 1499,
+        "currency": "INR",
+        "color": "Blue",
+        "fit": "Relaxed",
+        "material": "Polyester Blend",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "249.jpg",
+            "250.jpg",
+            "251.jpg",
+            "252.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-064",
+        "name": "Oversized Graphic T-Shirt",
+        "category": "T-Shirts",
+        "description": "A relaxed fit brown oversized graphic t-shirt made from 100% cotton. Designed for everyday comfort and casual wear.",
+        "price": 1699,
+        "currency": "INR",
+        "color": "Brown",
+        "fit": "Relaxed",
+        "material": "100% Cotton",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "253.jpg",
+            "254.jpg",
+            "255.jpg",
+            "256.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-065",
+        "name": "Urban Street T-Shirt",
+        "category": "T-Shirts",
+        "description": "A oversized fit beige urban street t-shirt made from organic cotton. Designed for everyday comfort and casual wear.",
+        "price": 1799,
+        "currency": "INR",
+        "color": "Beige",
+        "fit": "Oversized",
+        "material": "Organic Cotton",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "257.jpg",
+            "258.jpg",
+            "259.jpg",
+            "260.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-066",
+        "name": "Slim Fit Jeans",
+        "category": "Jeans",
+        "description": "A straight fit beige slim fit jeans made from denim. Designed for everyday comfort and casual wear.",
+        "price": 2999,
+        "currency": "INR",
+        "color": "Beige",
+        "fit": "Straight",
+        "material": "Denim",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "261.jpg",
+            "262.jpg",
+            "263.jpg",
+            "264.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-067",
+        "name": "Lightweight Bomber Jacket",
+        "category": "Jackets",
+        "description": "A oversized fit black lightweight bomber jacket made from nylon. Designed for everyday comfort and casual wear.",
+        "price": 3999,
+        "currency": "INR",
+        "color": "Black",
+        "fit": "Oversized",
+        "material": "Nylon",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "265.jpg",
+            "266.jpg",
+            "267.jpg",
+            "268.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-068",
+        "name": "Oversized Fleece Hoodie",
+        "category": "Hoodies",
+        "description": "A relaxed fit navy oversized fleece hoodie made from cotton fleece. Designed for everyday comfort and casual wear.",
+        "price": 2599,
+        "currency": "INR",
+        "color": "Navy",
+        "fit": "Relaxed",
+        "material": "Cotton Fleece",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "269.jpg",
+            "270.jpg",
+            "271.jpg",
+            "272.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-069",
+        "name": "Essential Casual T-Shirt",
+        "category": "T-Shirts",
+        "description": "A regular fit white essential casual t-shirt made from 100% cotton. Designed for everyday comfort and casual wear.",
+        "price": 1799,
+        "currency": "INR",
+        "color": "White",
+        "fit": "Regular",
+        "material": "100% Cotton",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "273.jpg",
+            "274.jpg",
+            "275.jpg",
+            "276.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-070",
+        "name": "Straight Fit Pants",
+        "category": "Pants",
+        "description": "A straight fit navy straight fit pants made from cotton blend. Designed for everyday comfort and casual wear.",
+        "price": 2199,
+        "currency": "INR",
+        "color": "Navy",
+        "fit": "Straight",
+        "material": "Cotton Blend",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "277.jpg",
+            "278.jpg",
+            "279.jpg",
+            "280.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-071",
+        "name": "Minimal Logo Hoodie",
+        "category": "Hoodies",
+        "description": "A oversized fit brown minimal logo hoodie made from cotton fleece. Designed for everyday comfort and casual wear.",
+        "price": 1699,
+        "currency": "INR",
+        "color": "Brown",
+        "fit": "Oversized",
+        "material": "Cotton Fleece",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "281.jpg",
+            "282.jpg",
+            "283.jpg",
+            "284.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-072",
+        "name": "Classic Crewneck Sweatshirt",
+        "category": "Sweatshirts",
+        "description": "A relaxed fit blue classic crewneck sweatshirt made from cotton fleece. Designed for everyday comfort and casual wear.",
+        "price": 2799,
+        "currency": "INR",
+        "color": "Blue",
+        "fit": "Relaxed",
+        "material": "Cotton Fleece",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "285.jpg",
+            "286.jpg",
+            "287.jpg",
+            "288.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-073",
+        "name": "Everyday Denim Jacket",
+        "category": "Jackets",
+        "description": "A regular fit green everyday denim jacket made from cotton. Designed for everyday comfort and casual wear.",
+        "price": 3399,
+        "currency": "INR",
+        "color": "Green",
+        "fit": "Regular",
+        "material": "Cotton",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "289.jpg",
+            "290.jpg",
+            "291.jpg",
+            "292.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-074",
+        "name": "Classic Casual Pants",
+        "category": "Pants",
+        "description": "A straight fit navy classic casual pants made from cotton blend. Designed for everyday comfort and casual wear.",
+        "price": 2999,
+        "currency": "INR",
+        "color": "Navy",
+        "fit": "Straight",
+        "material": "Cotton Blend",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "293.jpg",
+            "294.jpg",
+            "295.jpg",
+            "296.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-075",
+        "name": "Comfort Cotton Trousers",
+        "category": "Pants",
+        "description": "A regular fit blue comfort cotton trousers made from polyester blend. Designed for everyday comfort and casual wear.",
+        "price": 2499,
+        "currency": "INR",
+        "color": "Blue",
+        "fit": "Regular",
+        "material": "Polyester Blend",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "297.jpg",
+            "298.jpg",
+            "299.jpg",
+            "300.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-076",
+        "name": "Straight Fit Pants",
+        "category": "Pants",
+        "description": "A regular fit blue straight fit pants made from cotton blend. Designed for everyday comfort and casual wear.",
+        "price": 1799,
+        "currency": "INR",
+        "color": "Blue",
+        "fit": "Regular",
+        "material": "Cotton Blend",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "301.jpg",
+            "302.jpg",
+            "303.jpg",
+            "304.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-077",
+        "name": "Slim Fit Formal Shirt",
+        "category": "Shirts",
+        "description": "A relaxed fit black slim fit formal shirt made from linen. Designed for everyday comfort and casual wear.",
+        "price": 1799,
+        "currency": "INR",
+        "color": "Black",
+        "fit": "Relaxed",
+        "material": "Linen",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "305.jpg",
+            "306.jpg",
+            "307.jpg",
+            "308.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-078",
+        "name": "Casual Linen Shirt",
+        "category": "Shirts",
+        "description": "A slim fit navy casual linen shirt made from cotton blend. Designed for everyday comfort and casual wear.",
+        "price": 1799,
+        "currency": "INR",
+        "color": "Navy",
+        "fit": "Slim",
+        "material": "Cotton Blend",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "309.jpg",
+            "310.jpg",
+            "311.jpg",
+            "312.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-079",
+        "name": "Relaxed Cotton Shirt",
+        "category": "Shirts",
+        "description": "A relaxed fit beige relaxed cotton shirt made from linen. Designed for everyday comfort and casual wear.",
+        "price": 2399,
+        "currency": "INR",
+        "color": "Beige",
+        "fit": "Relaxed",
+        "material": "Linen",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "313.jpg",
+            "314.jpg",
+            "315.jpg",
+            "316.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-080",
+        "name": "Everyday Denim Jacket",
+        "category": "Jackets",
+        "description": "A relaxed fit grey everyday denim jacket made from cotton. Designed for everyday comfort and casual wear.",
+        "price": 2499,
+        "currency": "INR",
+        "color": "Grey",
+        "fit": "Relaxed",
+        "material": "Cotton",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "317.jpg",
+            "318.jpg",
+            "319.jpg",
+            "320.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-081",
+        "name": "Classic Cotton T-Shirt",
+        "category": "T-Shirts",
+        "description": "A regular fit blue classic cotton t-shirt made from cotton blend. Designed for everyday comfort and casual wear.",
+        "price": 1599,
+        "currency": "INR",
+        "color": "Blue",
+        "fit": "Regular",
+        "material": "Cotton Blend",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "321.jpg",
+            "322.jpg",
+            "323.jpg",
+            "324.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-082",
+        "name": "Straight Fit Denim",
+        "category": "Jeans",
+        "description": "A slim fit green straight fit denim made from denim. Designed for everyday comfort and casual wear.",
+        "price": 2399,
+        "currency": "INR",
+        "color": "Green",
+        "fit": "Slim",
+        "material": "Denim",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "325.jpg",
+            "326.jpg",
+            "327.jpg",
+            "328.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-083",
+        "name": "Relaxed Denim Jeans",
+        "category": "Jeans",
+        "description": "A straight fit white relaxed denim jeans made from stretch denim. Designed for everyday comfort and casual wear.",
+        "price": 2699,
+        "currency": "INR",
+        "color": "White",
+        "fit": "Straight",
+        "material": "Stretch Denim",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "329.jpg",
+            "330.jpg",
+            "331.jpg",
+            "332.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-084",
+        "name": "Comfort Cotton Trousers",
+        "category": "Pants",
+        "description": "A relaxed fit black comfort cotton trousers made from cotton blend. Designed for everyday comfort and casual wear.",
+        "price": 2099,
+        "currency": "INR",
+        "color": "Black",
+        "fit": "Relaxed",
+        "material": "Cotton Blend",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "333.jpg",
+            "334.jpg",
+            "335.jpg",
+            "336.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-085",
+        "name": "Minimal Logo Hoodie",
+        "category": "Hoodies",
+        "description": "A oversized fit green minimal logo hoodie made from cotton fleece. Designed for everyday comfort and casual wear.",
+        "price": 1799,
+        "currency": "INR",
+        "color": "Green",
+        "fit": "Oversized",
+        "material": "Cotton Fleece",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "337.jpg",
+            "338.jpg",
+            "339.jpg",
+            "340.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-086",
+        "name": "Checked Casual Shirt",
+        "category": "Shirts",
+        "description": "A relaxed fit brown checked casual shirt made from cotton blend. Designed for everyday comfort and casual wear.",
+        "price": 1899,
+        "currency": "INR",
+        "color": "Brown",
+        "fit": "Relaxed",
+        "material": "Cotton Blend",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "341.jpg",
+            "342.jpg",
+            "343.jpg",
+            "344.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-087",
+        "name": "Straight Fit Denim",
+        "category": "Jeans",
+        "description": "A straight fit navy straight fit denim made from stretch denim. Designed for everyday comfort and casual wear.",
+        "price": 3499,
+        "currency": "INR",
+        "color": "Navy",
+        "fit": "Straight",
+        "material": "Stretch Denim",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "345.jpg",
+            "346.jpg",
+            "347.jpg",
+            "348.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-088",
+        "name": "Relaxed Fit Trousers",
+        "category": "Pants",
+        "description": "A regular fit brown relaxed fit trousers made from cotton. Designed for everyday comfort and casual wear.",
+        "price": 2899,
+        "currency": "INR",
+        "color": "Brown",
+        "fit": "Regular",
+        "material": "Cotton",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "349.jpg",
+            "350.jpg",
+            "351.jpg",
+            "352.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-089",
+        "name": "Relaxed Everyday Shorts",
+        "category": "Shorts",
+        "description": "A relaxed fit green relaxed everyday shorts made from cotton blend. Designed for everyday comfort and casual wear.",
+        "price": 1499,
+        "currency": "INR",
+        "color": "Green",
+        "fit": "Relaxed",
+        "material": "Cotton Blend",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "353.jpg",
+            "354.jpg",
+            "355.jpg",
+            "356.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-090",
+        "name": "Comfort Cotton Trousers",
+        "category": "Pants",
+        "description": "A straight fit blue comfort cotton trousers made from cotton. Designed for everyday comfort and casual wear.",
+        "price": 2899,
+        "currency": "INR",
+        "color": "Blue",
+        "fit": "Straight",
+        "material": "Cotton",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "364.jpg",
+            "365.jpg",
+            "366.jpg",
+            "367.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-091",
+        "name": "Comfort Cotton Trousers",
+        "category": "Pants",
+        "description": "A relaxed fit beige comfort cotton trousers made from cotton blend. Designed for everyday comfort and casual wear.",
+        "price": 2999,
+        "currency": "INR",
+        "color": "Beige",
+        "fit": "Relaxed",
+        "material": "Cotton Blend",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "368.jpg",
+            "369.jpg",
+            "370.jpg",
+            "371.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-092",
+        "name": "Classic Cotton T-Shirt",
+        "category": "T-Shirts",
+        "description": "A regular fit beige classic cotton t-shirt made from 100% cotton. Designed for everyday comfort and casual wear.",
+        "price": 1099,
+        "currency": "INR",
+        "color": "Beige",
+        "fit": "Regular",
+        "material": "100% Cotton",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "372.jpg",
+            "373.jpg",
+            "374.jpg",
+            "375.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-093",
+        "name": "Straight Fit Denim",
+        "category": "Jeans",
+        "description": "A relaxed fit beige straight fit denim made from denim. Designed for everyday comfort and casual wear.",
+        "price": 2599,
+        "currency": "INR",
+        "color": "Beige",
+        "fit": "Relaxed",
+        "material": "Denim",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "376.jpg",
+            "377.jpg",
+            "378.jpg",
+            "379.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-094",
+        "name": "Classic Oxford Shirt",
+        "category": "Shirts",
+        "description": "A regular fit grey classic oxford shirt made from cotton. Designed for everyday comfort and casual wear.",
+        "price": 1499,
+        "currency": "INR",
+        "color": "Grey",
+        "fit": "Regular",
+        "material": "Cotton",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "380.jpg",
+            "381.jpg",
+            "382.jpg",
+            "383.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-095",
+        "name": "Relaxed Denim Jeans",
+        "category": "Jeans",
+        "description": "A relaxed fit black relaxed denim jeans made from stretch denim. Designed for everyday comfort and casual wear.",
+        "price": 3499,
+        "currency": "INR",
+        "color": "Black",
+        "fit": "Relaxed",
+        "material": "Stretch Denim",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "384.jpg",
+            "385.jpg",
+            "386.jpg",
+            "387.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-096",
+        "name": "Classic Casual Shorts",
+        "category": "Shorts",
+        "description": "A regular fit brown classic casual shorts made from cotton. Designed for everyday comfort and casual wear.",
+        "price": 1499,
+        "currency": "INR",
+        "color": "Brown",
+        "fit": "Regular",
+        "material": "Cotton",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "388.jpg",
+            "389.jpg",
+            "390.jpg",
+            "391.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-097",
+        "name": "Utility Jacket",
+        "category": "Jackets",
+        "description": "A regular fit black utility jacket made from nylon. Designed for everyday comfort and casual wear.",
+        "price": 3499,
+        "currency": "INR",
+        "color": "Black",
+        "fit": "Regular",
+        "material": "Nylon",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "392.jpg",
+            "393.jpg",
+            "394.jpg",
+            "395.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-098",
+        "name": "Urban Street T-Shirt",
+        "category": "T-Shirts",
+        "description": "A oversized fit blue urban street t-shirt made from 100% cotton. Designed for everyday comfort and casual wear.",
+        "price": 1599,
+        "currency": "INR",
+        "color": "Blue",
+        "fit": "Oversized",
+        "material": "100% Cotton",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "396.jpg",
+            "397.jpg",
+            "398.jpg",
+            "399.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-099",
+        "name": "Classic Cotton T-Shirt",
+        "category": "T-Shirts",
+        "description": "A regular fit navy classic cotton t-shirt made from 100% cotton. Designed for everyday comfort and casual wear.",
+        "price": 1099,
+        "currency": "INR",
+        "color": "Navy",
+        "fit": "Regular",
+        "material": "100% Cotton",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "400.jpg",
+            "401.jpg",
+            "402.jpg",
+            "403.jpg"
+        ]
+    },
+    {
+        "product_id": "PROD-100",
+        "name": "Slim Fit Jeans",
+        "category": "Jeans",
+        "description": "A slim fit navy slim fit jeans made from stretch denim. Designed for everyday comfort and casual wear.",
+        "price": 1799,
+        "currency": "INR",
+        "color": "Navy",
+        "fit": "Slim",
+        "material": "Stretch Denim",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "404.jpg",
+            "405.jpg",
+            "406.jpg",
+            "407.jpg"
+        ]
+    }
+]
