@@ -1,3 +1,4 @@
+import os
 import json
 from pathlib import Path
 
@@ -22,7 +23,7 @@ DB_CONFIG = {
     "port": 5432,
     "database": "clothing_store",
     "user": "postgres",
-    "password": "Wecandoit1@",
+    "password": os.getenv("LOCAL_DB_PASSWORD"),
 }
 
 

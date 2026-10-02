@@ -7,17 +7,28 @@ from app.services.llm_service import (
 )
 import asyncio
 import json
+import os
+import sys
+from pathlib import Path
 from mcp import ClientSession, StdioServerParameters
 from mcp.client.stdio import stdio_client
 
-MCP_SERVER_PATH = (
-    r"D:\AI Instagram content\MCP_TOOLBOX\clothing_store_server\server.py"
+MCP_SERVER_PATH = str(
+    Path(__file__).resolve().parents[2] / "mcp_server" / "server.py"
 )
-async def get_mcp_tools():
-    server_params = StdioServerParameters(
-        command="python",
-        args=[MCP_SERVER_PATH]
+
+
+def _server_params():
+    # The MCP server runs as a child process. By default it would NOT inherit
+    # DATABASE_URL etc., so pass the environment explicitly.
+    return StdioServerParameters(
+        command=sys.executable,
+        args=[MCP_SERVER_PATH],
+        env=dict(os.environ)
     )
+
+async def get_mcp_tools():
+    server_params = _server_params()
 
     async with stdio_client(server_params) as (read, write):
         async with ClientSession(read, write) as session:
@@ -110,10 +121,7 @@ def extract_tool_call(result):
 
 
 async def execute_mcp_tool(tool_name: str, arguments: dict):
-    server_params = StdioServerParameters(
-        command="python",
-        args=[MCP_SERVER_PATH]
-    )
+    server_params = _server_params()
 
     async with stdio_client(server_params) as (read, write):
         async with ClientSession(read, write) as session:
@@ -182,12 +190,14 @@ async def process_message(
         message,
         llm_tools
     )
+    tool_results = []  # lets the frontend render product cards etc.
     while True:
         tool_call = extract_tool_call(result)
         if not tool_call:
             return {
                 "type": "FINAL_RESPONSE",
-                "response": result["response"]
+                "response": result["response"],
+                "tool_results": tool_results
             }
         if tool_call["tool_name"] == "ask_customer":
             customer_request = handle_ask_customer(
@@ -201,6 +211,7 @@ async def process_message(
                 customer_request
             )
 
+            customer_request["tool_results"] = tool_results
             return customer_request
 
     
@@ -215,6 +226,7 @@ async def process_message(
         )
 
         parsed_result = parse_mcp_tool_result(tool_result)
+        tool_results.append({"tool": tool_call["tool_name"], "result": parsed_result})
 
         result = send_tool_result_to_llm(
             llm_conversation_id,

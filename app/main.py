@@ -1,4 +1,8 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from pathlib import Path
+from app.storefront import router as storefront_router
 from app.database import get_connection
 from app.services.return_service import create_return
 from pydantic import BaseModel
@@ -23,6 +27,12 @@ from app.services.orchestrator import (
 
 
 app = FastAPI()
+
+app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
+app.include_router(storefront_router)
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+app.mount("/images", StaticFiles(directory=BASE_DIR / "dataset" / "raw"), name="images")
 
 
 
@@ -357,3 +367,7 @@ async def chat(request: ChatRequest):
         ),
         "ai_result": ai_result
     }
+
+
+# Storefront UI -> http://localhost:8000/store/
+app.mount("/store", StaticFiles(directory=BASE_DIR / "frontend", html=True), name="store")

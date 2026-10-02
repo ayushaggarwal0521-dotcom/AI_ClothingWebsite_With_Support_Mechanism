@@ -136,14 +136,14 @@ def get_order_items(order_id: str):
     }
 
 
-def cancel_order(order_id: str):
+def check_cancellation_eligibility(order_id: str):
+    """Read-only. Does NOT change anything."""
 
     connection = get_connection()
     cursor = connection.cursor()
 
     cursor.execute("""
-        SELECT
-            order_date
+        SELECT order_date, status
         FROM orders
         WHERE order_id = %s
     """, (order_id,))
@@ -154,29 +154,72 @@ def cancel_order(order_id: str):
     connection.close()
 
     if order is None:
-        return {
-            "success": False,
-            "reason": "Order not found."
-        }
+        return {"success": False, "reason": "Order not found."}
 
-    order_date = order[0]
+    order_date, status = order
 
-    cancellation_deadline = order_date + timedelta(hours=12)
+    if status == "CANCELLED":
+        return {"success": True, "cancellation_allowed": False,
+                "order_id": order_id,
+                "reason": "This order is already cancelled."}
 
-    current_time = datetime.now()
+    if status in ("SHIPPED", "DELIVERED"):
+        return {"success": True, "cancellation_allowed": False,
+                "order_id": order_id,
+                "reason": f"The order is already {status.lower()} and can no longer be cancelled. A return can be requested after delivery."}
 
-    if current_time <= cancellation_deadline:
-        return {
-            "success": True,
-            "cancellation_allowed": True,
-            "order_id": order_id,
-            "cancellation_deadline": cancellation_deadline,
-            "support_email": "abc@gmail.com"
-        }
+    deadline = order_date + timedelta(hours=12)
 
-    return {
-        "success": True,
-        "cancellation_allowed": False,
-        "order_id": order_id,
-        "reason": "The 12-hour cancellation window has expired."
-    }
+    if datetime.now() > deadline:
+        return {"success": True, "cancellation_allowed": False,
+                "order_id": order_id,
+                "reason": "The 12-hour cancellation window has expired."}
+
+    return {"success": True, "cancellation_allowed": True,
+            "order_id": order_id, "cancellation_deadline": deadline,
+            "support_email": "abc@gmail.com"}
+
+
+def cancel_order(order_id: str):
+    """Actually cancels the order (status -> CANCELLED) and restores stock.
+    Re-checks eligibility first, so it is safe even if called directly."""
+
+    check = check_cancellation_eligibility(order_id)
+
+    if not check.get("success") or not check.get("cancellation_allowed"):
+        return check
+
+    connection = get_connection()
+    cursor = connection.cursor()
+
+    try:
+        cursor.execute("""
+            UPDATE orders SET status = 'CANCELLED'
+            WHERE order_id = %s
+              AND status NOT IN ('CANCELLED', 'SHIPPED', 'DELIVERED')
+        """, (order_id,))
+
+        if cursor.rowcount == 0:
+            connection.rollback()
+            return {"success": False, "reason": "Order could not be cancelled."}
+
+        cursor.execute("""
+            UPDATE inventory i
+            SET stock_quantity = i.stock_quantity + oi.quantity
+            FROM order_items oi
+            WHERE oi.order_id = %s
+              AND oi.product_id = i.product_id
+        """, (order_id,))
+
+        connection.commit()
+
+        return {"success": True, "cancelled": True, "order_id": order_id,
+                "order_status": "CANCELLED", "support_email": "abc@gmail.com"}
+
+    except Exception:
+        connection.rollback()
+        raise
+
+    finally:
+        cursor.close()
+        connection.close()

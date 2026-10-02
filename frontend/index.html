@@ -1,0 +1,115 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ATELIER 9 — Everyday Clothing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f1e9;--ink:#1c1a17;--mut:#6f6a60;--line:#ddd5c7;--acc:#b4462b;--card:#fffdf9;font-family:'DM Sans',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0}body{background:var(--bg);color:var(--ink)}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}
+h1,h2,h3,.logo{font-family:Fraunces,Georgia,serif;font-weight:700}
+header{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:22px;padding:14px 4vw}
+.logo{font-size:24px;letter-spacing:.04em}nav{display:flex;gap:18px;flex:1;font-weight:500}nav a:hover{color:var(--acc)}
+header input{border:1px solid var(--line);background:var(--card);padding:9px 14px;border-radius:99px;width:220px;font:inherit}
+.ib{background:none;border:0;font-size:15px;font-weight:500;position:relative}.badge{background:var(--acc);color:#fff;border-radius:99px;font-size:11px;padding:1px 6px;margin-left:3px}
+main{padding:28px 4vw 80px;max-width:1280px;margin:auto}
+.btn{border:1.5px solid var(--ink);background:var(--ink);color:#fff;padding:11px 20px;border-radius:4px;font-weight:700;letter-spacing:.02em}.btn.o{background:transparent;color:var(--ink)}.btn.a{background:var(--acc);border-color:var(--acc)}.btn:disabled{opacity:.4;cursor:not-allowed}
+.hero{background:var(--ink);color:#f6f1e9;border-radius:6px;padding:64px 6vw;margin-bottom:40px;display:grid;gap:18px;justify-items:start}
+.hero h1{font-size:clamp(34px,5vw,60px);line-height:1.05;max-width:680px}.hero p{color:#cfc7b8;max-width:520px}
+.chips{display:flex;gap:8px;flex-wrap:wrap}.chip{border:1px solid var(--line);background:var(--card);border-radius:99px;padding:7px 14px;font-size:14px}.chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}.hero .chip{background:transparent;color:#f6f1e9;border-color:#5c564b}.hero .chip:hover{border-color:#fff}
+h2{font-size:28px;margin:34px 0 16px}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:6px;overflow:hidden;display:flex;flex-direction:column}
+.card .im{aspect-ratio:3/4;background:#e9e2d5;overflow:hidden;display:block}.card img{width:100%;height:100%;object-fit:cover;transition:.4s}.card:hover img{transform:scale(1.04)}
+.card .b{padding:12px 14px;display:grid;gap:4px}.card .n{font-weight:500}.card .s{color:var(--mut);font-size:13px}.price{font-weight:700}
+.card .act{display:flex;gap:8px;padding:0 14px 14px;margin-top:auto}.card .act .btn{flex:1;padding:9px 6px;font-size:13px}
+.tag{font-size:12px;color:var(--acc);font-weight:700}
+.bar{display:flex;gap:18px;flex-wrap:wrap;align-items:center;margin-bottom:22px;padding-bottom:16px;border-bottom:1px solid var(--line)}.bar select{padding:8px;border:1px solid var(--line);background:var(--card);border-radius:4px;font:inherit}
+.pd{display:grid;grid-template-columns:1fr 1fr;gap:44px}@media(max-width:800px){.pd{grid-template-columns:1fr}nav{display:none}header input{width:120px}}
+.pd .big{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:6px;background:#e9e2d5}.th{display:flex;gap:8px;margin-top:10px}.th img{width:72px;height:92px;object-fit:cover;border-radius:4px;cursor:pointer;border:2px solid transparent}.th img.on{border-color:var(--ink)}
+.pd dl{display:grid;grid-template-columns:90px 1fr;gap:6px;margin:16px 0}.pd dt{color:var(--mut)}
+.sz{display:flex;gap:8px;margin:8px 0 16px}.sz button{min-width:48px;padding:10px;border:1.5px solid var(--line);background:var(--card);border-radius:4px}.sz button.on{border-color:var(--ink);background:var(--ink);color:#fff}
+.ask{margin-top:22px;padding:16px;border:1px dashed var(--acc);border-radius:6px}.ask .chip{margin:4px 6px 0 0;cursor:pointer}
+table{border-collapse:collapse;font-size:14px;margin:8px 0}td,th{border:1px solid var(--line);padding:6px 12px;text-align:center}
+.ov{position:fixed;inset:0;background:#0007;z-index:40;display:flex;justify-content:center;align-items:center}.ov.r{justify-content:flex-end;align-items:stretch}
+.pan{background:var(--bg);padding:24px;border-radius:8px;width:min(480px,94vw);max-height:92vh;overflow:auto}.ov.r .pan{border-radius:0;max-height:none;height:100%;display:flex;flex-direction:column}
+.row{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);align-items:center}.row img{width:56px;height:72px;object-fit:cover;border-radius:4px}.row .g{flex:1;font-size:14px}
+.q button{width:26px;height:26px;border:1px solid var(--line);background:var(--card);border-radius:4px}
+label{display:block;font-size:13px;color:var(--mut);margin-top:10px}input.f{width:100%;padding:10px;border:1px solid var(--line);border-radius:4px;font:inherit;background:var(--card)}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;padding:12px 20px;border-radius:6px;z-index:60}
+#fab{position:fixed;right:22px;bottom:22px;z-index:30;box-shadow:0 8px 24px #0004;border-radius:99px;padding:14px 22px}
+.chat{flex:1;overflow:auto;display:flex;flex-direction:column;gap:12px;padding:12px 0}.m{max-width:88%;padding:10px 14px;border-radius:14px;font-size:14.5px;line-height:1.45;white-space:pre-wrap}.m.u{align-self:flex-end;background:var(--ink);color:#fff}.m.a{align-self:flex-start;background:var(--card);border:1px solid var(--line)}
+.mini{display:flex;gap:10px;overflow:auto;padding-bottom:6px}.mini a{flex:0 0 120px;background:var(--card);border:1px solid var(--line);border-radius:6px;overflow:hidden;font-size:12px}.mini img{width:100%;aspect-ratio:3/4;object-fit:cover}.mini div{padding:6px}
+.cf{border:1.5px solid var(--acc);border-radius:8px;padding:12px;background:var(--card);display:grid;gap:8px;font-size:14px}.cf .chips{gap:8px}
+.ci{display:flex;gap:8px;padding-top:10px}.ci input{flex:1;padding:11px;border:1px solid var(--line);border-radius:99px;font:inherit;background:var(--card)}
+.ok{text-align:center;padding:10px}.ok h3{font-size:24px;margin-bottom:8px}
+</style></head><body>
+<header><a class="logo" href="#/">ATELIER 9</a><nav><a href="#/shop?g=Men">Men</a><a href="#/shop?g=Women">Women</a><a href="#/shop">All Clothing</a><a href="#/orders">My Orders</a></nav>
+<input id="q" placeholder="Search clothing…"><button class="ib" onclick="openChat()">✨ Ask AI</button><button class="ib" onclick="cartUI()">🛒 Cart<span class="badge" id="cc">0</span></button></header>
+<main id="app"></main><button class="btn a" id="fab" onclick="openChat()">✨ Ask AI</button>
+<script>
+const API=location.port==='8000'&&location.protocol.startsWith('http')?'':'http://localhost:8000';const $=s=>document.querySelector(s),inr=n=>'₹'+Number(n).toLocaleString('en-IN'),img=p=>p.images[0]?`${API}/images/${p.images[0]}`:'';
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const ls=(k,d)=>{try{return JSON.parse(localStorage[k])}catch{return d}};let P=[],cart=ls('cart',[]),convo=sessionStorage.cid||null;
+const save=()=>{localStorage.cart=JSON.stringify(cart);$('#cc').textContent=cart.reduce((a,c)=>a+c.qty,0)};
+const by=id=>P.find(p=>p.product_id===id);
+function toast(t){const e=document.createElement('div');e.className='toast';e.textContent=t;document.body.append(e);setTimeout(()=>e.remove(),2500)}
+function modal(html,cls=''){close();const o=document.createElement('div');o.className='ov '+cls;o.id='ov';o.innerHTML=`<div class="pan">${html}</div>`;o.onclick=e=>{if(e.target===o)close()};document.body.append(o);return o}
+function close(){$('#ov')?.remove()}
+function card(p){const oos=p.stock<1;return `<div class="card"><a class="im" href="#/p/${p.product_id}"><img loading="lazy" src="${img(p)}" alt=""></a><div class="b"><span class="n">${esc(p.name)}</span><span class="s">${esc(p.color)} · ${esc(p.fit)} · ${esc(p.gender)}</span><span class="price">${inr(p.price)}</span>${oos?'<span class="tag">Out of stock</span>':p.stock<6?`<span class="tag">Only ${p.stock} left</span>`:''}</div>
+<div class="act"><button class="btn o" ${oos?'disabled':''} onclick="quickAdd('${p.product_id}')">Add to cart</button><button class="btn a" ${oos?'disabled':''} onclick="buy([{id:'${p.product_id}'}])">Buy now</button></div></div>`}
+function quickAdd(id){pickSize(by(id),s=>{addCart(id,s,1)})}
+function pickSize(p,cb){const o=modal(`<h3>${esc(p.name)}</h3><p style="margin:6px 0">Choose a size</p><div class="sz">${p.sizes.map(s=>`<button data-s="${s}">${s}</button>`).join('')}</div>`);o.querySelectorAll('[data-s]').forEach(b=>b.onclick=()=>{close();cb(b.dataset.s)})}
+function addCart(id,size,qty){const l=cart.find(c=>c.id===id&&c.size===size);l?l.qty+=qty:cart.push({id,size,qty});save();toast('Added to cart ✓')}
+function cartUI(){const rows=cart.map((c,i)=>{const p=by(c.id);return p?`<div class="row"><img src="${img(p)}"><div class="g"><b>${esc(p.name)}</b><br>Size ${c.size} · ${inr(p.price)}</div><div class="q"><button onclick="qty(${i},-1)">−</button> ${c.qty} <button onclick="qty(${i},1)">+</button></div></div>`:''}).join('');
+const tot=cart.reduce((a,c)=>a+(by(c.id)?.price||0)*c.qty,0);modal(`<h3>Your cart</h3>${rows||'<p style="margin:20px 0;color:var(--mut)">Your cart is empty.</p>'}<div style="flex:1"></div><p style="margin:16px 0"><b>Total ${inr(tot)}</b></p><button class="btn" style="width:100%" ${cart.length?'':'disabled'} onclick="buy(cart.map(c=>({id:c.id,size:c.size,qty:c.qty})),true)">Checkout</button>`,'r')}
+function qty(i,d){cart[i].qty+=d;if(cart[i].qty<1)cart.splice(i,1);save();cartUI()}
+// Checkout used by cart AND Buy Now (no payment gateway yet: pay on delivery)
+function buy(items,fromCart){const go=items.every(i=>i.size)?null:items.findIndex(i=>!i.size);if(go!==null&&go>=0){const p=by(items[go].id);return pickSize(p,s=>{items[go].size=s;buy(items,fromCart)})}
+const u=ls('user',{name:'',email:'',phone:''}),tot=items.reduce((a,i)=>a+by(i.id).price*(i.qty||1),0);
+modal(`<h3>Confirm your order</h3>${items.map(i=>{const p=by(i.id);return `<div class="row"><img src="${img(p)}"><div class="g"><b>${esc(p.name)}</b><br>Size ${i.size} × ${i.qty||1}</div><b>${inr(p.price*(i.qty||1))}</b></div>`}).join('')}
+<p style="margin:12px 0"><b>Total ${inr(tot)}</b> · Pay on delivery</p><label>Full name</label><input class="f" id="cn" value="${esc(u.name)}"><label>Email</label><input class="f" id="ce" type="email" value="${esc(u.email)}"><label>Phone</label><input class="f" id="cp" value="${esc(u.phone)}">
+<button class="btn a" id="po" style="width:100%;margin-top:16px">Place order</button>`);
+$('#po').onclick=async()=>{const user={name:$('#cn').value.trim(),email:$('#ce').value.trim(),phone:$('#cp').value.trim()};if(!user.name||!/\S+@\S+/.test(user.email)||user.phone.length<8)return toast('Please fill in valid details');
+$('#po').disabled=true;$('#po').textContent='Placing order…';
+try{const r=await fetch(API+'/api/orders',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({...user,items:items.map(i=>({product_id:i.id,size:i.size,quantity:i.qty||1}))})});const d=await r.json();
+if(!r.ok)throw new Error(d.detail||'Failed');localStorage.user=JSON.stringify(user);localStorage.cust=d.customer_id;if(fromCart){cart=[];save()}
+modal(`<div class="ok"><h3>Order placed 🎉</h3><p>Your order <b>${d.order_id}</b> (${inr(d.total_amount)}) is confirmed.</p><p style="color:var(--mut);margin:8px 0 16px">Need help with it? Ask our AI assistant anytime.</p><button class="btn" onclick="close();location.hash='#/orders'">View my orders</button></div>`);load()}
+catch(e){toast(e.message);$('#po').disabled=false;$('#po').textContent='Place order'}}}
+async function load(){try{const r=await fetch(API+'/api/products');if(!r.ok)throw new Error(r.status);P=await r.json();route()}
+catch(e){$('#app').innerHTML='<div style="padding:60px 0;text-align:center"><h2>Can\'t reach the store server</h2><p style="color:var(--mut);margin:10px 0 18px">Start the backend with <code>uvicorn app.main:app --reload</code> and open <b>http://localhost:8000/store/</b></p><button class="btn" onclick="load()">Retry</button></div>'}}
+function route(){const[h,qs]=(location.hash||'#/').slice(1).split('?'),q=new URLSearchParams(qs||'');window.scrollTo(0,0);
+if(h.startsWith('/p/'))return detail(h.slice(3));if(h==='/shop')return shop(q);if(h==='/orders')return orders();home()}
+function home(){const cats=[...new Set(P.map(p=>p.category))];$('#app').innerHTML=`<section class="hero"><h1>Find what you're looking for with your AI shopping assistant.</h1><p>Tell us the fit, colour and budget — we'll do the browsing. Ask about sizes, orders and returns too.</p>
+<button class="btn a" onclick="openChat()">Ask AI ✨</button><div class="chips">${['Black oversized t-shirts under ₹2000','Find my size','Track my order','Return an item'].map(t=>`<button class="chip" onclick="openChat(this.textContent)">${t}</button>`).join('')}</div></section>
+<div class="chips">${cats.map(c=>`<a class="chip" href="#/shop?c=${encodeURIComponent(c)}">${c}</a>`).join('')}</div><h2>Popular products</h2><div class="grid">${P.filter(p=>p.stock>5).slice(0,8).map(card).join('')}</div>`}
+function shop(q){const f={c:q.get('c')||'',g:q.get('g')||'',color:q.get('color')||'',fit:q.get('fit')||'',u:q.get('u')||'',s:q.get('s')||'',sort:q.get('sort')||''},u=()=>'#/shop?'+new URLSearchParams(Object.fromEntries(Object.entries(f).filter(e=>e[1])));
+let L=P.filter(p=>(!f.c||p.category===f.c)&&(!f.g||p.gender===f.g||p.gender==='Unisex')&&(!f.color||p.color===f.color)&&(!f.fit||p.fit===f.fit)&&(!f.u||p.price<2000)&&(!f.s||(p.name+p.category+p.color+p.material).toLowerCase().includes(f.s.toLowerCase())));
+if(f.sort)L.sort((a,b)=>f.sort==='lo'?a.price-b.price:b.price-a.price);const opt=(k,arr)=>arr.map(v=>`<button class="chip ${f[k]===v?'on':''}" onclick="go('${k}','${v}')">${v}</button>`).join('');
+window.go=(k,v)=>{f[k]=f[k]===v?'':v;location.hash=u()};const un=k=>[...new Set(P.map(p=>p[k]))].sort();
+$('#app').innerHTML=`<h2 style="margin-top:0">${f.c||'All clothing'}${f.s?` · “${esc(f.s)}”`:''}</h2><div class="bar"><div class="chips">${opt('g',['Men','Women'])}</div><div class="chips">${opt('color',un('color'))}</div><div class="chips">${opt('fit',un('fit'))}</div>
+<button class="chip ${f.u?'on':''}" onclick="go('u','1')">Under ₹2000</button><select onchange="f.c=this.value;location.hash=u()"><option value="">All categories</option>${un('category').map(c=>`<option ${f.c===c?'selected':''}>${c}</option>`).join('')}</select>
+<select onchange="f.sort=this.value;location.hash=u()"><option value="">Sort</option><option value="lo" ${f.sort==='lo'?'selected':''}>Price: low to high</option><option value="hi" ${f.sort==='hi'?'selected':''}>Price: high to low</option></select></div>
+<p style="color:var(--mut);margin-bottom:14px">${L.length} items</p><div class="grid">${L.map(card).join('')||'<p>No matches — try the AI assistant!</p>'}</div>`}
+function detail(id){const p=by(id);if(!p){$('#app').innerHTML='<p>Product not found.</p>';return}let sel='',n=1;const ch=p.sizes[0]&&/^\d/.test(p.sizes[0])?[['Waist','30','32','34','36'],['Inches','30','32','34','36']]:[['Size','S','M','L','XL'],['Chest (in)',36,38,40,42]];
+$('#app').innerHTML=`<p style="margin-bottom:16px;font-size:14px"><a href="#/shop">← All clothing</a> / <a href="#/shop?c=${p.category}">${p.category}</a></p><div class="pd"><div><img class="big" id="bg" src="${img(p)}"><div class="th">${p.images.map((i,k)=>`<img class="${k?'':'on'}" src="${API}/images/${i}" onclick="bg.src=this.src;document.querySelectorAll('.th img').forEach(x=>x.classList.toggle('on',x===this))">`).join('')}</div></div>
+<div><h1 style="font-size:36px">${esc(p.name)}</h1><p class="price" style="font-size:24px;margin:8px 0">${inr(p.price)} <span style="font-size:13px;color:var(--mut);font-weight:400">incl. taxes</span></p><dl><dt>Color</dt><dd>${esc(p.color)}</dd><dt>Material</dt><dd>${esc(p.material)}</dd><dt>Fit</dt><dd>${esc(p.fit)}</dd><dt>For</dt><dd>${esc(p.gender)}</dd><dt>Availability</dt><dd>${p.stock>0?(p.stock<6?`Only ${p.stock} left`:'In stock'):'Out of stock'}</dd></dl><p style="margin-bottom:16px">${esc(p.description)}</p>
+<b>Size</b> <a href="#" style="font-size:13px;color:var(--acc)" onclick="event.preventDefault();modal('<h3>Size chart</h3><table>${ch.map(r=>'<tr>'+r.map(c=>'<td>'+c+'</td>').join('')+'</tr>').join('')}</table><p style=color:var(--mut);font-size:13px>Between sizes? Ask our AI assistant.</p>')">Size chart</a>
+<div class="sz">${p.sizes.map(s=>`<button onclick="sel='${s}';document.querySelectorAll('.sz button').forEach(b=>b.classList.toggle('on',b===this))">${s}</button>`).join('')}</div>
+<div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn o" ${p.stock<1?'disabled':''} id="ac">Add to cart</button><button class="btn a" ${p.stock<1?'disabled':''} id="bn">Buy now</button></div>
+<div class="ask"><b>✨ Ask AI about this product</b><br>${['Is this good for summer?','Which size should I get?',`Is the ${p.name} cotton?`,'What is the return policy?'].map(t=>`<span class="chip" onclick="openChat(this.textContent+' (${p.name}, ${p.product_id})')">${t}</span>`).join('')}</div></div></div>`;
+const need=()=>sel||(toast('Please select a size'),0);$('#ac').onclick=()=>need()&&addCart(id,sel,1);$('#bn').onclick=()=>need()&&buy([{id,size:sel,qty:1}])}
+async function orders(){const c=localStorage.cust;$('#app').innerHTML='<h2 style="margin-top:0">My orders</h2><div id="ol">Loading…</div>';
+if(!c)return $('#ol').innerHTML='<p>No orders yet on this device. Place an order, or ask the AI assistant about an order ID (e.g. “Where is ORD-080?”).</p>';
+const o=await (await fetch(`${API}/customers/${c}/orders`)).json();$('#ol').innerHTML=o.map(x=>`<div class="row"><div class="g"><b>${x.order_id}</b> · ${new Date(x.order_date).toLocaleDateString()}<br><span class="tag">${x.status}</span></div><b>${inr(x.total_amount)}</b><button class="btn o" onclick="openChat('Where is my order ${x.order_id}?')">Track</button><button class="btn o" onclick="openChat('I want to return something from ${x.order_id}')">Return</button></div>`).join('')||'<p>No orders yet.</p>'}
+// ---------- AI assistant ----------
+function openChat(first){const o=modal(`<div style="display:flex;justify-content:space-between"><h3>✨ AI Shopping Assistant</h3><button class="ib" onclick="close()">✕</button></div><div class="chat" id="ch"><div class="m a">Hi! I can find products, check sizes, track orders and handle returns. What are you looking for?</div>
+<div class="chips">${['Black oversized t-shirts under ₹2000','Find my size','Track my order','Return an item'].map(t=>`<button class="chip" onclick="send(this.textContent)">${t}</button>`).join('')}</div></div><div class="ci"><input id="ci" placeholder="Type your question…"><button class="btn" id="cs">Send</button></div>`,'r');
+(window.hist||[]).forEach(h=>bubble(h.t,h.r,h.x));$('#cs').onclick=()=>send();$('#ci').onkeydown=e=>{if(e.key==='Enter')send()};$('#ci').focus();if(first)send(first)}
+window.hist=[];function bubble(t,r,extra){const d=document.createElement('div');d.className='m '+r;d.textContent=t;$('#ch').append(d);if(extra){const e=document.createElement('div');e.innerHTML=extra;$('#ch').append(e)}$('#ch').scrollTop=1e9;return d}
+function miniCards(tr){const ids=[];(tr||[]).forEach(t=>{const r=t.result||{};(r.products||(r.product?[r.product]:[])).forEach(p=>ids.push(p.product_id))});const ps=[...new Set(ids)].map(by).filter(Boolean).slice(0,8);
+return ps.length?`<div class="mini">${ps.map(p=>`<a href="#/p/${p.product_id}" onclick="close()"><img src="${img(p)}"><div><b>${esc(p.name)}</b><br>${inr(p.price)}</div></a>`).join('')}</div>`:''}
+async function send(text){const i=$('#ci');text=text||i.value.trim();if(!text)return;i.value='';bubble(text,'u');hist.push({t:text,r:'u'});const w=bubble('Typing…','a');
+try{const r=await fetch(API+'/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:text,conversation_id:convo})});const d=await r.json();
+if(d.conversation_id){convo=d.conversation_id;sessionStorage.cid=convo}const a=d.ai_result||{},msg=a.response||a.question||d.message||'Sorry, something went wrong.';w.remove();let x=miniCards(a.tool_results);
+const made=(a.tool_results||[]).find(t=>t.result&&t.result.return_id);if(made)x+=`<div class="cf"><b>Return request submitted</b><span>Return ID: ${esc(made.result.return_id)}</span></div>`;
+const ask=a.type==='ASK_CUSTOMER'&&/confirm/i.test(msg);if(ask)x+=`<div class="cf"><b>Please confirm</b><div class="chips"><button class="btn a" onclick="send('Yes, confirm')">Confirm</button><button class="btn o" onclick="send('No, cancel')">Cancel</button></div></div>`;
+bubble(msg,'a',x);hist.push({t:msg,r:'a',x})}catch(e){w.textContent='Could not reach the assistant. Is the server running?'}}
+$('#q').onkeydown=e=>{if(e.key==='Enter')location.hash='#/shop?s='+encodeURIComponent(e.target.value)};addEventListener('hashchange',()=>P.length&&route());save();load();
+</script></body></html>

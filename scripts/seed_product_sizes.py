@@ -1,3 +1,4 @@
+import os
 import psycopg2
 
 
@@ -19,7 +20,7 @@ def get_connection():
         host="localhost",
         database="clothing_store",
         user="postgres",
-        password="Wecandoit1@"
+        password=os.getenv("LOCAL_DB_PASSWORD")
     )
 
 

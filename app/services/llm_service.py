@@ -98,6 +98,12 @@ Rules:
 
 22. The ask_customer tool does not perform a business action. It pauses
     the current request so the customer can provide the missing information.
+
+23. Before creating a return or cancelling an order, summarise the details
+    (item, quantity, reason) and call ask_customer to ask the customer to
+    confirm. Only perform the action after they confirm.
+
+24. Keep replies short and friendly. Never mention tool names or internals.
 """
 def acknowledge_tool_call(
     llm_conversation_id: str,
