@@ -44,7 +44,7 @@ label{display:block;font-size:13px;color:var(--mut);margin-top:10px}input.f{widt
 <input id="q" placeholder="Search clothing…"><button class="ib" onclick="openChat()">✨ Ask AI</button><button class="ib" onclick="cartUI()">🛒 Cart<span class="badge" id="cc">0</span></button></header>
 <main id="app"></main><button class="btn a" id="fab" onclick="openChat()">✨ Ask AI</button>
 <script>
-const API=location.port==='8000'&&location.protocol.startsWith('http')?'':'http://localhost:8000';const $=s=>document.querySelector(s),inr=n=>'₹'+Number(n).toLocaleString('en-IN'),img=p=>p.images[0]?`${API}/images/${p.images[0]}`:'';
+const API=location.protocol==='file:'?'http://localhost:8000':'';const $=s=>document.querySelector(s),inr=n=>'₹'+Number(n).toLocaleString('en-IN'),img=p=>p.images[0]?`${API}/images/${p.images[0]}`:'';
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const ls=(k,d)=>{try{return JSON.parse(localStorage[k])}catch{return d}};let P=[],cart=ls('cart',[]),convo=sessionStorage.cid||null;
 const save=()=>{localStorage.cart=JSON.stringify(cart);$('#cc').textContent=cart.reduce((a,c)=>a+c.qty,0)};
@@ -72,8 +72,8 @@ try{const r=await fetch(API+'/api/orders',{method:'POST',headers:{'Content-Type'
 if(!r.ok)throw new Error(d.detail||'Failed');localStorage.user=JSON.stringify(user);localStorage.cust=d.customer_id;if(fromCart){cart=[];save()}
 modal(`<div class="ok"><h3>Order placed 🎉</h3><p>Your order <b>${d.order_id}</b> (${inr(d.total_amount)}) is confirmed.</p><p style="color:var(--mut);margin:8px 0 16px">Need help with it? Ask our AI assistant anytime.</p><button class="btn" onclick="close();location.hash='#/orders'">View my orders</button></div>`);load()}
 catch(e){toast(e.message);$('#po').disabled=false;$('#po').textContent='Place order'}}}
-async function load(){try{const r=await fetch(API+'/api/products');if(!r.ok)throw new Error(r.status);P=await r.json();route()}
-catch(e){$('#app').innerHTML='<div style="padding:60px 0;text-align:center"><h2>Can\'t reach the store server</h2><p style="color:var(--mut);margin:10px 0 18px">Start the backend with <code>uvicorn app.main:app --reload</code> and open <b>http://localhost:8000/store/</b></p><button class="btn" onclick="load()">Retry</button></div>'}}
+async function load(){try{const r=await fetch(API+'/api/products');if(!r.ok)throw new Error('Server returned '+r.status);P=await r.json();route()}
+catch(e){$('#app').innerHTML='<div style="padding:60px 0;text-align:center"><h2>Can\'t load the store</h2><p style="color:#b4462b">'+esc(e.message)+'</p><p style="color:var(--mut);margin:10px 0 18px">Start the backend with <code>uvicorn app.main:app --reload</code> and open <b>http://localhost:8000/store/</b></p><button class="btn" onclick="load()">Retry</button></div>'}}
 function route(){const[h,qs]=(location.hash||'#/').slice(1).split('?'),q=new URLSearchParams(qs||'');window.scrollTo(0,0);
 if(h.startsWith('/p/'))return detail(h.slice(3));if(h==='/shop')return shop(q);if(h==='/orders')return orders();home()}
 function home(){const cats=[...new Set(P.map(p=>p.category))];$('#app').innerHTML=`<section class="hero"><h1>Find what you're looking for with your AI shopping assistant.</h1><p>Tell us the fit, colour and budget — we'll do the browsing. Ask about sizes, orders and returns too.</p>
