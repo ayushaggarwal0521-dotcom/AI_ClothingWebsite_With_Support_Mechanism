@@ -16,16 +16,21 @@ main{padding:28px 4vw 80px;max-width:1280px;margin:auto}
 .chips{display:flex;gap:8px;flex-wrap:wrap}.chip{border:1px solid var(--line);background:var(--card);border-radius:99px;padding:7px 14px;font-size:14px}.chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}.hero .chip{background:transparent;color:#f6f1e9;border-color:#5c564b}.hero .chip:hover{border-color:#fff}
 h2{font-size:28px;margin:34px 0 16px}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:22px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:6px;overflow:hidden;display:flex;flex-direction:column}
-.card .im{aspect-ratio:3/4;background:#e9e2d5;overflow:hidden;display:block}.card img{width:100%;height:100%;object-fit:cover;transition:.4s}.card:hover img{transform:scale(1.04)}
+.im,.gal{position:relative;aspect-ratio:3/4;background:#e9e2d5;overflow:hidden}
+.sl{display:flex;width:100%;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}.sl::-webkit-scrollbar{display:none}
+.sl img{flex:0 0 100%;width:100%;height:100%;object-fit:cover;scroll-snap-align:center;scroll-snap-stop:always;-webkit-user-drag:none;user-select:none}
+.ar{position:absolute;top:50%;transform:translateY(-50%);width:32px;height:32px;border-radius:50%;border:0;background:#fffdf9e6;color:var(--ink);font-size:20px;line-height:1;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px #0003;opacity:0;transition:.2s;z-index:2}.ar.l{left:8px}.ar.r{right:8px}
+.im:hover .ar,.gal:hover .ar{opacity:1}@media(hover:none){.ar{opacity:.9}}
+.dots{position:absolute;bottom:8px;left:0;right:0;display:flex;justify-content:center;gap:5px;pointer-events:none;z-index:2}.dots i{width:6px;height:6px;border-radius:50%;background:#fffdf9aa;box-shadow:0 0 3px #0005}.dots i.on{background:#fff;transform:scale(1.3)}
 .card .b{padding:12px 14px;display:grid;gap:4px}.card .n{font-weight:500}.card .s{color:var(--mut);font-size:13px}.price{font-weight:700}
 .card .act{display:flex;gap:8px;padding:0 14px 14px;margin-top:auto}.card .act .btn{flex:1;padding:9px 6px;font-size:13px}
 .tag{font-size:12px;color:var(--acc);font-weight:700}
 .bar{display:flex;gap:18px;flex-wrap:wrap;align-items:center;margin-bottom:22px;padding-bottom:16px;border-bottom:1px solid var(--line)}.bar select{padding:8px;border:1px solid var(--line);background:var(--card);border-radius:4px;font:inherit}
 .pd{display:grid;grid-template-columns:1fr 1fr;gap:44px}@media(max-width:800px){.pd{grid-template-columns:1fr}nav{display:none}header input{width:120px}}
-.pd .big{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:6px;background:#e9e2d5}.th{display:flex;gap:8px;margin-top:10px}.th img{width:72px;height:92px;object-fit:cover;border-radius:4px;cursor:pointer;border:2px solid transparent}.th img.on{border-color:var(--ink)}
+.pd .gal{border-radius:6px}.th{display:flex;gap:8px;margin-top:10px}.th img{width:72px;height:92px;object-fit:cover;border-radius:4px;cursor:pointer;border:2px solid transparent}.th img.on{border-color:var(--ink)}
 .pd dl{display:grid;grid-template-columns:90px 1fr;gap:6px;margin:16px 0}.pd dt{color:var(--mut)}
 .sz{display:flex;gap:8px;margin:8px 0 16px}.sz button{min-width:48px;padding:10px;border:1.5px solid var(--line);background:var(--card);border-radius:4px}.sz button.on{border-color:var(--ink);background:var(--ink);color:#fff}
-.ask{margin-top:22px;padding:16px;border:1px dashed var(--acc);border-radius:6px}.ask .chip{margin:4px 6px 0 0;cursor:pointer}
+.ask{margin-top:22px;padding:16px;border:1px dashed var(--acc);border-radius:6px}.ask .qs{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.ask .chip{cursor:pointer;line-height:1.3;display:inline-block}
 table{border-collapse:collapse;font-size:14px;margin:8px 0}td,th{border:1px solid var(--line);padding:6px 12px;text-align:center}
 .ov{position:fixed;inset:0;background:#0007;z-index:40;display:flex;justify-content:center;align-items:center}.ov.r{justify-content:flex-end;align-items:stretch}
 .pan{background:var(--bg);padding:24px;border-radius:8px;width:min(480px,94vw);max-height:92vh;overflow:auto}.ov.r .pan{border-radius:0;max-height:none;height:100%;display:flex;flex-direction:column}
@@ -52,7 +57,13 @@ const by=id=>P.find(p=>p.product_id===id);
 function toast(t){const e=document.createElement('div');e.className='toast';e.textContent=t;document.body.append(e);setTimeout(()=>e.remove(),2500)}
 function modal(html,cls=''){close();const o=document.createElement('div');o.className='ov '+cls;o.id='ov';o.innerHTML=`<div class="pan">${html}</div>`;o.onclick=e=>{if(e.target===o)close()};document.body.append(o);return o}
 function close(){$('#ov')?.remove()}
-function card(p){const oos=p.stock<1;return `<div class="card"><a class="im" href="#/p/${p.product_id}"><img loading="lazy" src="${img(p)}" alt=""></a><div class="b"><span class="n">${esc(p.name)}</span><span class="s">${esc(p.color)} · ${esc(p.fit)} · ${esc(p.gender)}</span><span class="price">${inr(p.price)}</span>${oos?'<span class="tag">Out of stock</span>':p.stock<6?`<span class="tag">Only ${p.stock} left</span>`:''}</div>
+function slides(p){return (p.images.length?p.images:['']).map((i,k)=>`<img ${k?'loading="lazy"':''} draggable="false" src="${i?API+'/images/'+i:''}" alt="">`).join('')}
+function arrows(p){const n=p.images.length;return n>1?`<button class="ar l" aria-label="Previous photo" onclick="slide(this,-1)">‹</button><button class="ar r" aria-label="Next photo" onclick="slide(this,1)">›</button><div class="dots">${p.images.map((_,k)=>`<i class="${k?'':'on'}"></i>`).join('')}</div>`:''}
+function slide(b,d){const sl=b.parentElement.querySelector('.sl');sl.scrollBy({left:d*sl.clientWidth,behavior:'smooth'})}
+document.addEventListener('scroll',e=>{const t=e.target;if(!t.classList||!t.classList.contains('sl'))return;const i=Math.round(t.scrollLeft/Math.max(t.clientWidth,1));
+t.parentElement.querySelectorAll('.dots i').forEach((d,k)=>d.classList.toggle('on',k===i));
+if(t.id==='bg')document.querySelectorAll('.th img').forEach((x,k)=>x.classList.toggle('on',k===i))},true);
+function card(p){const oos=p.stock<1;return `<div class="card"><div class="im"><a class="sl" href="#/p/${p.product_id}">${slides(p)}</a>${arrows(p)}</div><div class="b"><span class="n">${esc(p.name)}</span><span class="s">${esc(p.color)} · ${esc(p.fit)} · ${esc(p.gender)}</span><span class="price">${inr(p.price)}</span>${oos?'<span class="tag">Out of stock</span>':p.stock<6?`<span class="tag">Only ${p.stock} left</span>`:''}</div>
 <div class="act"><button class="btn o" ${oos?'disabled':''} onclick="quickAdd('${p.product_id}')">Add to cart</button><button class="btn a" ${oos?'disabled':''} onclick="buy([{id:'${p.product_id}'}])">Buy now</button></div></div>`}
 function quickAdd(id){pickSize(by(id),s=>{addCart(id,s,1)})}
 function pickSize(p,cb){const o=modal(`<h3>${esc(p.name)}</h3><p style="margin:6px 0">Choose a size</p><div class="sz">${p.sizes.map(s=>`<button data-s="${s}">${s}</button>`).join('')}</div>`);o.querySelectorAll('[data-s]').forEach(b=>b.onclick=()=>{close();cb(b.dataset.s)})}
@@ -87,13 +98,16 @@ $('#app').innerHTML=`<h2 style="margin-top:0">${f.c||'All clothing'}${f.s?` · �
 <button class="chip ${f.u?'on':''}" onclick="go('u','1')">Under ₹2000</button><select onchange="f.c=this.value;location.hash=u()"><option value="">All categories</option>${un('category').map(c=>`<option ${f.c===c?'selected':''}>${c}</option>`).join('')}</select>
 <select onchange="f.sort=this.value;location.hash=u()"><option value="">Sort</option><option value="lo" ${f.sort==='lo'?'selected':''}>Price: low to high</option><option value="hi" ${f.sort==='hi'?'selected':''}>Price: high to low</option></select></div>
 <p style="color:var(--mut);margin-bottom:14px">${L.length} items</p><div class="grid">${L.map(card).join('')||'<p>No matches — try the AI assistant!</p>'}</div>`}
-function detail(id){const p=by(id);if(!p){$('#app').innerHTML='<p>Product not found.</p>';return}let sel='',n=1;const ch=p.sizes[0]&&/^\d/.test(p.sizes[0])?[['Waist','30','32','34','36'],['Inches','30','32','34','36']]:[['Size','S','M','L','XL'],['Chest (in)',36,38,40,42]];
-$('#app').innerHTML=`<p style="margin-bottom:16px;font-size:14px"><a href="#/shop">← All clothing</a> / <a href="#/shop?c=${p.category}">${p.category}</a></p><div class="pd"><div><img class="big" id="bg" src="${img(p)}"><div class="th">${p.images.map((i,k)=>`<img class="${k?'':'on'}" src="${API}/images/${i}" onclick="bg.src=this.src;document.querySelectorAll('.th img').forEach(x=>x.classList.toggle('on',x===this))">`).join('')}</div></div>
+function detail(id){const p=by(id);if(!p){$('#app').innerHTML='<p>Product not found.</p>';return}let sel='';const ch=p.sizes[0]&&/^\d/.test(p.sizes[0])?[['Waist','30','32','34','36'],['Inches','30','32','34','36']]:[['Size','S','M','L','XL'],['Chest (in)',36,38,40,42]];
+$('#app').innerHTML=`<p style="margin-bottom:16px;font-size:14px"><a href="#/shop">← All clothing</a> / <a href="#/shop?c=${p.category}">${p.category}</a></p><div class="pd"><div><div class="gal"><div class="sl" id="bg">${slides(p)}</div>${arrows(p)}</div><div class="th">${p.images.map((i,k)=>`<img class="${k?'':'on'}" data-i="${k}" src="${API}/images/${i}">`).join('')}</div></div>
 <div><h1 style="font-size:36px">${esc(p.name)}</h1><p class="price" style="font-size:24px;margin:8px 0">${inr(p.price)} <span style="font-size:13px;color:var(--mut);font-weight:400">incl. taxes</span></p><dl><dt>Color</dt><dd>${esc(p.color)}</dd><dt>Material</dt><dd>${esc(p.material)}</dd><dt>Fit</dt><dd>${esc(p.fit)}</dd><dt>For</dt><dd>${esc(p.gender)}</dd><dt>Availability</dt><dd>${p.stock>0?(p.stock<6?`Only ${p.stock} left`:'In stock'):'Out of stock'}</dd></dl><p style="margin-bottom:16px">${esc(p.description)}</p>
 <b>Size</b> <a href="#" style="font-size:13px;color:var(--acc)" onclick="event.preventDefault();modal('<h3>Size chart</h3><table>${ch.map(r=>'<tr>'+r.map(c=>'<td>'+c+'</td>').join('')+'</tr>').join('')}</table><p style=color:var(--mut);font-size:13px>Between sizes? Ask our AI assistant.</p>')">Size chart</a>
-<div class="sz">${p.sizes.map(s=>`<button onclick="sel='${s}';document.querySelectorAll('.sz button').forEach(b=>b.classList.toggle('on',b===this))">${s}</button>`).join('')}</div>
+<div class="sz">${p.sizes.map(s=>`<button data-s="${s}">${s}</button>`).join('')}</div>
 <div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn o" ${p.stock<1?'disabled':''} id="ac">Add to cart</button><button class="btn a" ${p.stock<1?'disabled':''} id="bn">Buy now</button></div>
-<div class="ask"><b>✨ Ask AI about this product</b><br>${['Is this good for summer?','Which size should I get?',`Is the ${p.name} cotton?`,'What is the return policy?'].map(t=>`<span class="chip" onclick="openChat(this.textContent+' (${p.name}, ${p.product_id})')">${t}</span>`).join('')}</div></div></div>`;
+<div class="ask"><b>✨ Ask AI about this product</b><div class="qs">${['Is this good for summer?','Which size should I get?',`Is the ${esc(p.name)} cotton?`,'What is the return policy?'].map(t=>`<button class="chip" data-q="${esc(t)}">${t}</button>`).join('')}</div></div></div></div>`;
+document.querySelectorAll('.sz button').forEach(b=>b.onclick=()=>{sel=b.dataset.s;document.querySelectorAll('.sz button').forEach(x=>x.classList.toggle('on',x===b))});
+document.querySelectorAll('.th img').forEach(t=>t.onclick=()=>{const g=$('#bg');g.scrollTo({left:(+t.dataset.i)*g.clientWidth,behavior:'smooth'})});
+document.querySelectorAll('.ask .chip').forEach(c=>c.onclick=()=>openChat(c.dataset.q+' ('+p.name+', '+p.product_id+')'));
 const need=()=>sel||(toast('Please select a size'),0);$('#ac').onclick=()=>need()&&addCart(id,sel,1);$('#bn').onclick=()=>need()&&buy([{id,size:sel,qty:1}])}
 async function orders(){const c=localStorage.cust;$('#app').innerHTML='<h2 style="margin-top:0">My orders</h2><div id="ol">Loading…</div>';
 if(!c)return $('#ol').innerHTML='<p>No orders yet on this device. Place an order, or ask the AI assistant about an order ID (e.g. “Where is ORD-080?”).</p>';
