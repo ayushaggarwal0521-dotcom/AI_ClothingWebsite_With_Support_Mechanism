@@ -1,5 +1,5 @@
 """Storefront API: catalogue for the UI + cart checkout / Buy Now (writes to PostgreSQL)."""
-import json, random
+import json
 from pathlib import Path
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
@@ -95,9 +95,18 @@ def place_order(req: Checkout):
             n += 1
         cur.execute("INSERT INTO payments (payment_id,order_id,amount,payment_method,payment_status,payment_time) VALUES (%s,%s,%s,%s,'PENDING',NOW())",
                     (f"PAY-{_next(cur, 'payments', 'payment_id', 'PAY'):03d}", oid, total, req.payment_method))
-        cur.execute("INSERT INTO shipments (shipment_id,order_id,delivery_status,courier_partner,tracking_number) VALUES (%s,%s,'PROCESSING',%s,%s)",
-                    (f"SHIP-{_next(cur, 'shipments', 'shipment_id', 'SHIP'):03d}", oid,
-                     random.choice(["Delhivery", "Blue Dart", "DTDC"]), f"TRK{random.randint(100000000, 999999999)}"))
+        # Shipment row is created so the order can be tracked, but courier and
+        # tracking number stay EMPTY until the order is really shipped.
+        sid = f"SHIP-{_next(cur, 'shipments', 'shipment_id', 'SHIP'):03d}"
+        cur.execute("SAVEPOINT ship")
+        try:
+            cur.execute("INSERT INTO shipments (shipment_id,order_id,delivery_status,courier_partner,tracking_number) VALUES (%s,%s,'PROCESSING',NULL,NULL)",
+                        (sid, oid))
+        except Exception:
+            # columns do not allow empty values -> use plain 'Pending' text
+            cur.execute("ROLLBACK TO SAVEPOINT ship")
+            cur.execute("INSERT INTO shipments (shipment_id,order_id,delivery_status,courier_partner,tracking_number) VALUES (%s,%s,'PROCESSING','Pending','Pending')",
+                        (sid, oid))
         con.commit()
         return {"success": True, "order_id": oid, "customer_id": cid, "total_amount": total}
     except HTTPException:
