@@ -44,6 +44,12 @@ label{display:block;font-size:13px;color:var(--mut);margin-top:10px}input.f{widt
 .cf{border:1.5px solid var(--acc);border-radius:8px;padding:12px;background:var(--card);display:grid;gap:8px;font-size:14px}.cf .chips{gap:8px}
 .ci{display:flex;gap:8px;padding-top:10px}.ci input{flex:1;padding:11px;border:1px solid var(--line);border-radius:99px;font:inherit;background:var(--card)}
 .ok{text-align:center;padding:10px}.ok h3{font-size:24px;margin-bottom:8px}
+
+/* compact floating chat (not a full-height drawer) */
+.ov.chatov{background:transparent;pointer-events:none;align-items:flex-end;justify-content:flex-end;padding:16px}
+.ov.chatov .pan{pointer-events:auto;width:min(400px,100%);height:min(540px,68vh);height:min(540px,68dvh);max-height:68vh;padding:12px 14px;border-radius:16px;border:1px solid var(--line);box-shadow:0 14px 44px #0005}
+.ov.chatov h3{font-size:18px}.ov.chatov .m{font-size:14px;padding:8px 12px}.ov.chatov .chat{gap:8px;padding:8px 0}
+@media(max-width:600px){.ov.chatov{padding:0}.ov.chatov .pan{width:100%;height:46vh;height:46dvh;max-height:46vh;border-radius:16px 16px 0 0;border-width:1px 0 0}}
 </style></head><body>
 <header><a class="logo" href="#/">ATELIER 9</a><nav><a href="#/shop?g=Men">Men</a><a href="#/shop?g=Women">Women</a><a href="#/shop">All Clothing</a><a href="#/orders">My Orders</a></nav>
 <input id="q" placeholder="Search clothing…"><button class="ib" onclick="openChat()">✨ Ask AI</button><button class="ib" onclick="cartUI()">🛒 Cart<span class="badge" id="cc">0</span></button></header>
@@ -114,7 +120,7 @@ if(!c)return $('#ol').innerHTML='<p>No orders yet on this device. Place an order
 const o=await (await fetch(`${API}/customers/${c}/orders`)).json();$('#ol').innerHTML=o.map(x=>`<div class="row"><div class="g"><b>${x.order_id}</b> · ${new Date(x.order_date).toLocaleDateString()}<br><span class="tag">${x.status}</span></div><b>${inr(x.total_amount)}</b><button class="btn o" onclick="openChat('Where is my order ${x.order_id}?')">Track</button><button class="btn o" onclick="openChat('I want to return something from ${x.order_id}')">Return</button></div>`).join('')||'<p>No orders yet.</p>'}
 // ---------- AI assistant ----------
 function openChat(first){const o=modal(`<div style="display:flex;justify-content:space-between"><h3>✨ AI Shopping Assistant</h3><button class="ib" onclick="close()">✕</button></div><div class="chat" id="ch"><div class="m a">Hi! I can find products, check sizes, track orders and handle returns. What are you looking for?</div>
-<div class="chips">${['Black oversized t-shirts under ₹2000','Find my size','Track my order','Return an item'].map(t=>`<button class="chip" onclick="send(this.textContent)">${t}</button>`).join('')}</div></div><div class="ci"><input id="ci" placeholder="Type your question…"><button class="btn" id="cs">Send</button></div>`,'r');
+<div class="chips">${['Black oversized t-shirts under ₹2000','Find my size','Track my order','Return an item'].map(t=>`<button class="chip" onclick="send(this.textContent)">${t}</button>`).join('')}</div></div><div class="ci"><input id="ci" placeholder="Type your question…"><button class="btn" id="cs">Send</button></div>`,'r chatov');
 (window.hist||[]).forEach(h=>bubble(h.t,h.r,h.x));$('#cs').onclick=()=>send();$('#ci').onkeydown=e=>{if(e.key==='Enter')send()};$('#ci').focus();if(first)send(first)}
 window.hist=[];function bubble(t,r,extra){const d=document.createElement('div');d.className='m '+r;d.innerHTML=esc(t).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>');$('#ch').append(d);if(extra){const e=document.createElement('div');e.innerHTML=extra;$('#ch').append(e)}$('#ch').scrollTop=1e9;return d}
 function miniCards(tr){const ids=[];(tr||[]).forEach(t=>{const r=t.result||{};(r.products||(r.product?[r.product]:[])).forEach(p=>ids.push(p.product_id))});const ps=[...new Set(ids)].map(by).filter(Boolean).slice(0,8);
