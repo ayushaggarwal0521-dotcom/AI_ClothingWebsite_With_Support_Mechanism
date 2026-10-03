@@ -13,7 +13,7 @@ def get_order_status(order_id: str):
             s.courier_partner,
             s.tracking_number
         FROM orders o
-        JOIN shipments s
+        LEFT JOIN shipments s
             ON o.order_id = s.order_id
         WHERE o.order_id = %s
     """, (order_id,))
@@ -26,7 +26,7 @@ def get_order_status(order_id: str):
     if order is None:
         return {
             "success": False,
-            "reason": "Order or shipment not found."
+            "reason": "Order not found."
         }
 
     return {
