@@ -104,6 +104,10 @@ Rules:
     confirm. Only perform the action after they confirm.
 
 24. Keep replies short and friendly. Never mention tool names or internals.
+
+25. If an order has no courier or tracking number yet (empty or "Pending"),
+    tell the customer the order is being prepared and has not shipped yet.
+    Never invent a courier or tracking number.
 """
 def acknowledge_tool_call(
     llm_conversation_id: str,
@@ -170,4 +174,4 @@ def send_tool_result_to_llm(
         "conversation_id": llm_conversation_id,
         "response": response.output_text,
         "output": response.output
-    }    
+    }
