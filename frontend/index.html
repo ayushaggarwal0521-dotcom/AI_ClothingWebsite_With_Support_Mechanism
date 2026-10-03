@@ -61,8 +61,8 @@ const ls=(k,d)=>{try{return JSON.parse(localStorage[k])}catch{return d}};let P=[
 const save=()=>{localStorage.cart=JSON.stringify(cart);$('#cc').textContent=cart.reduce((a,c)=>a+c.qty,0)};
 const by=id=>P.find(p=>p.product_id===id);
 function toast(t){const e=document.createElement('div');e.className='toast';e.textContent=t;document.body.append(e);setTimeout(()=>e.remove(),2500)}
-function modal(html,cls=''){close();const o=document.createElement('div');o.className='ov '+cls;o.id='ov';o.innerHTML=`<div class="pan">${html}</div>`;o.onclick=e=>{if(e.target===o)close()};document.body.append(o);return o}
-function close(){$('#ov')?.remove()}
+function modal(html,cls=''){closeModal();const o=document.createElement('div');o.className='ov '+cls;o.id='ov';o.innerHTML=`<div class="pan">${html}</div>`;o.onclick=e=>{if(e.target===o)closeModal()};document.body.append(o);return o}
+function closeModal(){$('#ov')?.remove()}
 function slides(p){return (p.images.length?p.images:['']).map((i,k)=>`<img ${k?'loading="lazy"':''} draggable="false" src="${i?API+'/images/'+i:''}" alt="">`).join('')}
 function arrows(p){const n=p.images.length;return n>1?`<button class="ar l" aria-label="Previous photo" onclick="slide(this,-1)">‹</button><button class="ar r" aria-label="Next photo" onclick="slide(this,1)">›</button><div class="dots">${p.images.map((_,k)=>`<i class="${k?'':'on'}"></i>`).join('')}</div>`:''}
 function slide(b,d){const sl=b.parentElement.querySelector('.sl');sl.scrollBy({left:d*sl.clientWidth,behavior:'smooth'})}
@@ -72,7 +72,7 @@ if(t.id==='bg')document.querySelectorAll('.th img').forEach((x,k)=>x.classList.t
 function card(p){const oos=p.stock<1;return `<div class="card"><div class="im"><a class="sl" href="#/p/${p.product_id}">${slides(p)}</a>${arrows(p)}</div><div class="b"><span class="n">${esc(p.name)}</span><span class="s">${esc(p.color)} · ${esc(p.fit)} · ${esc(p.gender)}</span><span class="price">${inr(p.price)}</span>${oos?'<span class="tag">Out of stock</span>':p.stock<6?`<span class="tag">Only ${p.stock} left</span>`:''}</div>
 <div class="act"><button class="btn o" ${oos?'disabled':''} onclick="quickAdd('${p.product_id}')">Add to cart</button><button class="btn a" ${oos?'disabled':''} onclick="buy([{id:'${p.product_id}'}])">Buy now</button></div></div>`}
 function quickAdd(id){pickSize(by(id),s=>{addCart(id,s,1)})}
-function pickSize(p,cb){const o=modal(`<h3>${esc(p.name)}</h3><p style="margin:6px 0">Choose a size</p><div class="sz">${p.sizes.map(s=>`<button data-s="${s}">${s}</button>`).join('')}</div>`);o.querySelectorAll('[data-s]').forEach(b=>b.onclick=()=>{close();cb(b.dataset.s)})}
+function pickSize(p,cb){const o=modal(`<h3>${esc(p.name)}</h3><p style="margin:6px 0">Choose a size</p><div class="sz">${p.sizes.map(s=>`<button data-s="${s}">${s}</button>`).join('')}</div>`);o.querySelectorAll('[data-s]').forEach(b=>b.onclick=()=>{closeModal();cb(b.dataset.s)})}
 function addCart(id,size,qty){const l=cart.find(c=>c.id===id&&c.size===size);l?l.qty+=qty:cart.push({id,size,qty});save();toast('Added to cart ✓')}
 function cartUI(){const rows=cart.map((c,i)=>{const p=by(c.id);return p?`<div class="row"><img src="${img(p)}"><div class="g"><b>${esc(p.name)}</b><br>Size ${c.size} · ${inr(p.price)}</div><div class="q"><button onclick="qty(${i},-1)">−</button> ${c.qty} <button onclick="qty(${i},1)">+</button></div></div>`:''}).join('');
 const tot=cart.reduce((a,c)=>a+(by(c.id)?.price||0)*c.qty,0);modal(`<h3>Your cart</h3>${rows||'<p style="margin:20px 0;color:var(--mut)">Your cart is empty.</p>'}<div style="flex:1"></div><p style="margin:16px 0"><b>Total ${inr(tot)}</b></p><button class="btn" style="width:100%" ${cart.length?'':'disabled'} onclick="buy(cart.map(c=>({id:c.id,size:c.size,qty:c.qty})),true)">Checkout</button>`,'r')}
@@ -87,7 +87,7 @@ $('#po').onclick=async()=>{const user={name:$('#cn').value.trim(),email:$('#ce')
 $('#po').disabled=true;$('#po').textContent='Placing order…';
 try{const r=await fetch(API+'/api/orders',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({...user,items:items.map(i=>({product_id:i.id,size:i.size,quantity:i.qty||1}))})});const d=await r.json();
 if(!r.ok)throw new Error(d.detail||'Failed');localStorage.user=JSON.stringify(user);localStorage.cust=d.customer_id;if(fromCart){cart=[];save()}
-modal(`<div class="ok"><h3>Order placed 🎉</h3><p>Your order <b>${d.order_id}</b> (${inr(d.total_amount)}) is confirmed.</p><p style="color:var(--mut);margin:8px 0 16px">Need help with it? Ask our AI assistant anytime.</p><button class="btn" onclick="close();location.hash='#/orders'">View my orders</button></div>`);load()}
+modal(`<div class="ok"><h3>Order placed 🎉</h3><p>Your order <b>${d.order_id}</b> (${inr(d.total_amount)}) is confirmed.</p><p style="color:var(--mut);margin:8px 0 16px">Need help with it? Ask our AI assistant anytime.</p><button class="btn" onclick="closeModal();location.hash='#/orders'">View my orders</button></div>`);load()}
 catch(e){toast(e.message);$('#po').disabled=false;$('#po').textContent='Place order'}}}
 async function load(){try{const r=await fetch(API+'/api/products');if(!r.ok)throw new Error('Server returned '+r.status);P=await r.json();route()}
 catch(e){$('#app').innerHTML='<div style="padding:60px 0;text-align:center"><h2>Can\'t load the store</h2><p style="color:#b4462b">'+esc(e.message)+'</p><p style="color:var(--mut);margin:10px 0 18px">Start the backend with <code>uvicorn app.main:app --reload</code> and open <b>http://localhost:8000/store/</b></p><button class="btn" onclick="load()">Retry</button></div>'}}
@@ -119,12 +119,12 @@ async function orders(){const c=localStorage.cust;$('#app').innerHTML='<h2 style
 if(!c)return $('#ol').innerHTML='<p>No orders yet on this device. Place an order, or ask the AI assistant about an order ID (e.g. “Where is ORD-080?”).</p>';
 const o=await (await fetch(`${API}/customers/${c}/orders`)).json();$('#ol').innerHTML=o.map(x=>`<div class="row"><div class="g"><b>${x.order_id}</b> · ${new Date(x.order_date).toLocaleDateString()}<br><span class="tag">${x.status}</span></div><b>${inr(x.total_amount)}</b><button class="btn o" onclick="openChat('Where is my order ${x.order_id}?')">Track</button><button class="btn o" onclick="openChat('I want to return something from ${x.order_id}')">Return</button></div>`).join('')||'<p>No orders yet.</p>'}
 // ---------- AI assistant ----------
-function openChat(first){const o=modal(`<div style="display:flex;justify-content:space-between"><h3>✨ AI Shopping Assistant</h3><button class="ib" onclick="close()">✕</button></div><div class="chat" id="ch"><div class="m a">Hi! I can find products, check sizes, track orders and handle returns. What are you looking for?</div>
+function openChat(first){const o=modal(`<div style="display:flex;justify-content:space-between"><h3>✨ AI Shopping Assistant</h3><button class="ib" onclick="closeModal()">✕</button></div><div class="chat" id="ch"><div class="m a">Hi! I can find products, check sizes, track orders and handle returns. What are you looking for?</div>
 <div class="chips">${['Black oversized t-shirts under ₹2000','Find my size','Track my order','Return an item'].map(t=>`<button class="chip" onclick="send(this.textContent)">${t}</button>`).join('')}</div></div><div class="ci"><input id="ci" placeholder="Type your question…"><button class="btn" id="cs">Send</button></div>`,'r chatov');
 (window.hist||[]).forEach(h=>bubble(h.t,h.r,h.x));$('#cs').onclick=()=>send();$('#ci').onkeydown=e=>{if(e.key==='Enter')send()};$('#ci').focus();if(first)send(first)}
 window.hist=[];function bubble(t,r,extra){const d=document.createElement('div');d.className='m '+r;d.innerHTML=esc(t).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>');$('#ch').append(d);if(extra){const e=document.createElement('div');e.innerHTML=extra;$('#ch').append(e)}$('#ch').scrollTop=1e9;return d}
 function miniCards(tr){const ids=[];(tr||[]).forEach(t=>{const r=t.result||{};(r.products||(r.product?[r.product]:[])).forEach(p=>ids.push(p.product_id))});const ps=[...new Set(ids)].map(by).filter(Boolean).slice(0,8);
-return ps.length?`<div class="mini">${ps.map(p=>`<a href="#/p/${p.product_id}" onclick="close()"><img src="${img(p)}"><div><b>${esc(p.name)}</b><br>${inr(p.price)}</div></a>`).join('')}</div>`:''}
+return ps.length?`<div class="mini">${ps.map(p=>`<a href="#/p/${p.product_id}" onclick="closeModal()"><img src="${img(p)}"><div><b>${esc(p.name)}</b><br>${inr(p.price)}</div></a>`).join('')}</div>`:''}
 async function post(text,retry=true){const r=await fetch(API+'/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:text,conversation_id:convo})});const d=await r.json();
 // closed / expired / unknown conversation -> silently start a fresh chat and resend once
 if(d.success===false&&convo&&(d.status==='CLOSED'||/expired|no longer active|not found/i.test(d.message||''))){convo=null;sessionStorage.removeItem('cid');if(retry)return post(text,false)}
@@ -135,5 +135,5 @@ if(d.conversation_id&&d.success!==false){convo=d.conversation_id;sessionStorage.
 const made=(a.tool_results||[]).find(t=>t.result&&t.result.return_id);if(made)x+=`<div class="cf"><b>Return request submitted</b><span>Return ID: ${esc(made.result.return_id)}</span></div>`;
 const ask=a.type==='ASK_CUSTOMER'&&/confirm/i.test(msg);if(ask)x+=`<div class="cf"><b>Please confirm</b><div class="chips"><button class="btn a" onclick="send('Yes, confirm')">Confirm</button><button class="btn o" onclick="send('No, cancel')">Cancel</button></div></div>`;
 bubble(msg,'a',x);hist.push({t:msg,r:'a',x})}catch(e){w.textContent='Could not reach the assistant. Is the server running?'}}
-$('#q').onkeydown=e=>{if(e.key==='Enter')location.hash='#/shop?s='+encodeURIComponent(e.target.value)};addEventListener('hashchange',()=>P.length&&route());save();load();
+addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});$('#q').onkeydown=e=>{if(e.key==='Enter')location.hash='#/shop?s='+encodeURIComponent(e.target.value)};addEventListener('hashchange',()=>P.length&&route());save();load();
 </script></body></html>
